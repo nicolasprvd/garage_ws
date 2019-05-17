@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://services/" xmlns:tns="http://services/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="ajouterVehicule" type="tns:ajouterVehicule"/>
+
+  <xs:element name="ajouterVehiculeResponse" type="tns:ajouterVehiculeResponse"/>
+
+  <xs:element name="getVehicule" type="tns:getVehicule"/>
+
+  <xs:element name="getVehiculeResponse" type="tns:getVehiculeResponse"/>
+
+  <xs:element name="getVehicules" type="tns:getVehicules"/>
+
+  <xs:element name="getVehiculesParMarque" type="tns:getVehiculesParMarque"/>
+
+  <xs:element name="getVehiculesParMarqueResponse" type="tns:getVehiculesParMarqueResponse"/>
+
+  <xs:element name="getVehiculesParPrix" type="tns:getVehiculesParPrix"/>
+
+  <xs:element name="getVehiculesParPrixResponse" type="tns:getVehiculesParPrixResponse"/>
+
+  <xs:element name="getVehiculesParType" type="tns:getVehiculesParType"/>
+
+  <xs:element name="getVehiculesParTypeResponse" type="tns:getVehiculesParTypeResponse"/>
+
+  <xs:element name="getVehiculesResponse" type="tns:getVehiculesResponse"/>
+
+  <xs:element name="vehicule" type="tns:vehicule"/>
+
+  <xs:complexType name="getVehiculesParMarque">
+    <xs:sequence>
+      <xs:element name="marque" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getVehiculesParMarqueResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:vehicule" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="vehicule">
+    <xs:sequence>
+      <xs:element name="immatriculation" type="xs:string" minOccurs="0"/>
+      <xs:element name="marque" type="xs:string" minOccurs="0"/>
+      <xs:element name="couleur" type="xs:string" minOccurs="0"/>
+      <xs:element name="modele" type="xs:string" minOccurs="0"/>
+      <xs:element name="options" type="xs:string" minOccurs="0"/>
+      <xs:element name="moteur" type="xs:string" minOccurs="0"/>
+      <xs:element name="prix" type="xs:double"/>
+      <xs:element name="kilometrage" type="xs:int"/>
+      <xs:element name="anneeVehicule" type="xs:int"/>
+      <xs:element name="type" type="tns:vehiculeType" minOccurs="0"/>
+      <xs:element name="estLoue" type="xs:boolean"/>
+      <xs:element name="enVente" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getVehiculesParPrix">
+    <xs:sequence>
+      <xs:element name="prix" type="xs:double"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getVehiculesParPrixResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:vehicule" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getVehicules">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="getVehiculesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:vehicule" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ajouterVehicule">
+    <xs:sequence>
+      <xs:element name="vehicule" type="tns:vehicule" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ajouterVehiculeResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="getVehicule">
+    <xs:sequence>
+      <xs:element name="immatriculation" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getVehiculeResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:vehicule" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getVehiculesParType">
+    <xs:sequence>
+      <xs:element name="type" type="tns:vehiculeType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getVehiculesParTypeResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:vehicule" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="vehiculeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="VOITURE"/>
+      <xs:enumeration value="MOTO"/>
+      <xs:enumeration value="SCOOTER"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
+

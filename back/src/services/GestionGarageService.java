@@ -1,0 +1,117 @@
+package services;
+
+import java.util.List;
+
+import javax.jws.WebMethod;
+import javax.jws.WebParam;
+import javax.jws.WebService;
+import javax.jws.soap.SOAPBinding;
+import javax.jws.soap.SOAPBinding.Style;
+
+import models.Employe;
+import models.Vehicule;
+import models.VehiculeType;
+
+@WebService
+@SOAPBinding(style=Style.DOCUMENT, use=SOAPBinding.Use.LITERAL, parameterStyle= SOAPBinding.ParameterStyle.WRAPPED) 
+public interface GestionGarageService {
+	
+	/**
+	 * Méthode d'ajout d'un véhicule
+	 * @param v
+	 */
+	@WebMethod(operationName = "ajouterVehicule")
+	void ajouterVehicule(@WebParam(name="vehicule") Vehicule v);
+	
+	//Modifier un vehicule
+	
+	
+	/**
+	 * Méthode de suppression d'un véhicule
+	 * @param v
+	 */
+	@WebMethod(operationName = "supprimerVehicule")
+	void supprimerVehicule(@WebParam(name = "vehicule") Vehicule v);
+	
+	/**
+	 * Méthode retournant la liste des véhicules
+	 * @return List
+	 */
+	@WebMethod(operationName = "getVehicules")
+	List<Vehicule> getVehicules();
+	
+	/**
+	 * Méthode retournant un véhicule par son immatriculation
+	 * @param immatriculation
+	 * @return Vehicule
+	 */
+	@WebMethod(operationName = "getVehicule")
+	Vehicule getVehicule(@WebParam(name="immatriculation") String immatriculation);
+	
+	/**
+	 * Méthode retournant les véhicules par marque
+	 * @param marque
+	 * @return List
+	 */
+	@WebMethod(operationName = "getVehiculesParMarque")
+	List<Vehicule> getVehiculesParMarque(@WebParam(name="marque") String marque);
+	
+	/**
+	 * Méthode retournant les véhicules par prix
+	 * @param prix
+	 * @return List
+	 */
+	@WebMethod(operationName = "getVehiculesParPrix")
+	List<Vehicule> getVehiculesParPrix(@WebParam(name="prix") double prix);
+	
+	/**
+	 * Méthode retournant les véhicules par type
+	 * @param type
+	 * @return
+	 */
+	@WebMethod(operationName = "getVehiculesParType")
+	List<Vehicule> getVehiculesParType(@WebParam(name="type") VehiculeType type);
+	
+	/**
+	 * Méthode d'ajout d'un employe
+	 * @param e
+	 */
+	@WebMethod(operationName = "ajouterEmploye")
+	void ajouterEmploye(Employe e);
+	
+	//Inscrire un employe
+	//Authentifier un employé
+
+	//Modifier infos employe
+	
+	/**
+	 * Méthode retournant les employés
+	 * @param e
+	 */
+	@WebMethod(operationName = "getEmployes")
+	List<Employe> getEmployes();
+	
+	/**
+	 * Méthode de suppression d'un véhicule
+	 * @param v
+	 */
+	@WebMethod(operationName = "supprimerEmploye")
+	void supprimerEmploye(@WebParam(name = "employe") Employe e);
+	
+	/**
+	 * Méthode d'achat d'un véhicule
+	 * @param v
+	 */
+	@WebMethod(operationName = "achatVehicule")
+	void achatVehicule(Vehicule v);
+	
+	
+	/**
+	 * Méthode de location d'un véhicule
+	 * @param v
+	 */
+	@WebMethod(operationName = "locationVehicule")
+	void locationVehicule(Vehicule v);
+	
+
+}
