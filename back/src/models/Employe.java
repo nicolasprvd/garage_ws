@@ -1,5 +1,23 @@
 package models;
 
+import java.util.Objects;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
+
+import parsers.AuthenficationHash;
+
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "employe", propOrder = {
+		"matricule",
+		"nom",
+		"prenom",
+		"fonction",
+		"telephone",
+		"mail",
+		"motDePasse"
+})
 public class Employe {
 	
 	private int matricule;
@@ -8,18 +26,18 @@ public class Employe {
 	private String fonction;
 	private String telephone;
 	private String mail;
-	private String motDdePasse;
+	private String motDePasse;
 	
 	public Employe() {}
 
-	public Employe(int matricule, String nom, String prenom, String fonction, String telephone, String mail, String motDdePasse) {
+	public Employe(int matricule, String nom, String prenom, String fonction, String telephone, String mail, String motDePasse) {
 		this.matricule+=1;
 		this.nom = nom;
 		this.prenom = prenom;
 		this.fonction = fonction;
 		this.telephone = telephone;
 		this.mail = mail;
-		this.motDdePasse = motDdePasse;
+		this.motDePasse = motDePasse;
 	}
 
 	public int getMatricule() {
@@ -71,75 +89,41 @@ public class Employe {
 	}
 
 	public String getMotDdePasse() {
-		return motDdePasse;
+		return motDePasse;
 	}
 
-	public void setMotDdePasse(String motDdePasse) {
-		this.motDdePasse = motDdePasse;
+	public void setMotDePasse(String motDePasse) {
+		this.motDePasse = AuthenficationHash.hash(motDePasse);
 	}
 
 	@Override
 	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((fonction == null) ? 0 : fonction.hashCode());
-		result = prime * result + ((mail == null) ? 0 : mail.hashCode());
-		result = prime * result + matricule;
-		result = prime * result + ((motDdePasse == null) ? 0 : motDdePasse.hashCode());
-		result = prime * result + ((nom == null) ? 0 : nom.hashCode());
-		result = prime * result + ((prenom == null) ? 0 : prenom.hashCode());
-		result = prime * result + ((telephone == null) ? 0 : telephone.hashCode());
-		return result;
+		return Objects.hash(matricule,nom, prenom, fonction, telephone, mail, motDePasse);
 	}
 
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj)
+		if(this == obj) {
 			return true;
-		if (obj == null)
+		}
+		if(!(obj instanceof Employe)) {
 			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Employe other = (Employe) obj;
-		if (fonction == null) {
-			if (other.fonction != null)
-				return false;
-		} else if (!fonction.equals(other.fonction))
-			return false;
-		if (mail == null) {
-			if (other.mail != null)
-				return false;
-		} else if (!mail.equals(other.mail))
-			return false;
-		if (matricule != other.matricule)
-			return false;
-		if (motDdePasse == null) {
-			if (other.motDdePasse != null)
-				return false;
-		} else if (!motDdePasse.equals(other.motDdePasse))
-			return false;
-		if (nom == null) {
-			if (other.nom != null)
-				return false;
-		} else if (!nom.equals(other.nom))
-			return false;
-		if (prenom == null) {
-			if (other.prenom != null)
-				return false;
-		} else if (!prenom.equals(other.prenom))
-			return false;
-		if (telephone == null) {
-			if (other.telephone != null)
-				return false;
-		} else if (!telephone.equals(other.telephone))
-			return false;
-		return true;
+		}
+		Employe e = (Employe) obj;
+		return matricule == e.matricule && 
+				Objects.equals(nom, e.nom) &&
+				Objects.equals(prenom, e.prenom) &&
+				Objects.equals(fonction, e.fonction) &&
+				Objects.equals(telephone, e.telephone) &&
+				Objects.equals(mail, e.mail) &&
+				Objects.equals(motDePasse, e.motDePasse);
+		
 	}
 
 	@Override
 	public String toString() {
 		return "Employe [matricule=" + matricule + ", nom=" + nom + ", prenom=" + prenom + ", fonction=" + fonction
-				+ ", telephone=" + telephone + ", mail=" + mail + ", motDdePasse=" + motDdePasse + "]";
+				+ ", telephone=" + telephone + ", mail=" + mail + "]";
 	}
 	
 	

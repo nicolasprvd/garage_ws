@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:complexType name="employe">
+    <xs:sequence>
+      <xs:element name="matricule" type="xs:int"/>
+      <xs:element name="nom" type="xs:string" minOccurs="0"/>
+      <xs:element name="prenom" type="xs:string" minOccurs="0"/>
+      <xs:element name="fonction" type="xs:string" minOccurs="0"/>
+      <xs:element name="telephone" type="xs:string" minOccurs="0"/>
+      <xs:element name="mail" type="xs:string" minOccurs="0"/>
+      <xs:element name="motDePasse" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

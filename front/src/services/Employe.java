@@ -8,78 +8,38 @@
 package services;
 
 public class Employe  implements java.io.Serializable {
-    private java.lang.String fonction;
-
-    private java.lang.String mail;
-
     private int matricule;
-
-    private java.lang.String motDdePasse;
 
     private java.lang.String nom;
 
     private java.lang.String prenom;
 
+    private java.lang.String fonction;
+
     private java.lang.String telephone;
+
+    private java.lang.String mail;
+
+    private java.lang.String motDePasse;
 
     public Employe() {
     }
 
     public Employe(
-           java.lang.String fonction,
-           java.lang.String mail,
            int matricule,
-           java.lang.String motDdePasse,
            java.lang.String nom,
            java.lang.String prenom,
-           java.lang.String telephone) {
-           this.fonction = fonction;
-           this.mail = mail;
+           java.lang.String fonction,
+           java.lang.String telephone,
+           java.lang.String mail,
+           java.lang.String motDePasse) {
            this.matricule = matricule;
-           this.motDdePasse = motDdePasse;
            this.nom = nom;
            this.prenom = prenom;
+           this.fonction = fonction;
            this.telephone = telephone;
-    }
-
-
-    /**
-     * Gets the fonction value for this Employe.
-     * 
-     * @return fonction
-     */
-    public java.lang.String getFonction() {
-        return fonction;
-    }
-
-
-    /**
-     * Sets the fonction value for this Employe.
-     * 
-     * @param fonction
-     */
-    public void setFonction(java.lang.String fonction) {
-        this.fonction = fonction;
-    }
-
-
-    /**
-     * Gets the mail value for this Employe.
-     * 
-     * @return mail
-     */
-    public java.lang.String getMail() {
-        return mail;
-    }
-
-
-    /**
-     * Sets the mail value for this Employe.
-     * 
-     * @param mail
-     */
-    public void setMail(java.lang.String mail) {
-        this.mail = mail;
+           this.mail = mail;
+           this.motDePasse = motDePasse;
     }
 
 
@@ -100,26 +60,6 @@ public class Employe  implements java.io.Serializable {
      */
     public void setMatricule(int matricule) {
         this.matricule = matricule;
-    }
-
-
-    /**
-     * Gets the motDdePasse value for this Employe.
-     * 
-     * @return motDdePasse
-     */
-    public java.lang.String getMotDdePasse() {
-        return motDdePasse;
-    }
-
-
-    /**
-     * Sets the motDdePasse value for this Employe.
-     * 
-     * @param motDdePasse
-     */
-    public void setMotDdePasse(java.lang.String motDdePasse) {
-        this.motDdePasse = motDdePasse;
     }
 
 
@@ -164,6 +104,26 @@ public class Employe  implements java.io.Serializable {
 
 
     /**
+     * Gets the fonction value for this Employe.
+     * 
+     * @return fonction
+     */
+    public java.lang.String getFonction() {
+        return fonction;
+    }
+
+
+    /**
+     * Sets the fonction value for this Employe.
+     * 
+     * @param fonction
+     */
+    public void setFonction(java.lang.String fonction) {
+        this.fonction = fonction;
+    }
+
+
+    /**
      * Gets the telephone value for this Employe.
      * 
      * @return telephone
@@ -182,6 +142,46 @@ public class Employe  implements java.io.Serializable {
         this.telephone = telephone;
     }
 
+
+    /**
+     * Gets the mail value for this Employe.
+     * 
+     * @return mail
+     */
+    public java.lang.String getMail() {
+        return mail;
+    }
+
+
+    /**
+     * Sets the mail value for this Employe.
+     * 
+     * @param mail
+     */
+    public void setMail(java.lang.String mail) {
+        this.mail = mail;
+    }
+
+
+    /**
+     * Gets the motDePasse value for this Employe.
+     * 
+     * @return motDePasse
+     */
+    public java.lang.String getMotDePasse() {
+        return motDePasse;
+    }
+
+
+    /**
+     * Sets the motDePasse value for this Employe.
+     * 
+     * @param motDePasse
+     */
+    public void setMotDePasse(java.lang.String motDePasse) {
+        this.motDePasse = motDePasse;
+    }
+
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof Employe)) return false;
@@ -194,25 +194,25 @@ public class Employe  implements java.io.Serializable {
         __equalsCalc = obj;
         boolean _equals;
         _equals = true && 
-            ((this.fonction==null && other.getFonction()==null) || 
-             (this.fonction!=null &&
-              this.fonction.equals(other.getFonction()))) &&
-            ((this.mail==null && other.getMail()==null) || 
-             (this.mail!=null &&
-              this.mail.equals(other.getMail()))) &&
             this.matricule == other.getMatricule() &&
-            ((this.motDdePasse==null && other.getMotDdePasse()==null) || 
-             (this.motDdePasse!=null &&
-              this.motDdePasse.equals(other.getMotDdePasse()))) &&
             ((this.nom==null && other.getNom()==null) || 
              (this.nom!=null &&
               this.nom.equals(other.getNom()))) &&
             ((this.prenom==null && other.getPrenom()==null) || 
              (this.prenom!=null &&
               this.prenom.equals(other.getPrenom()))) &&
+            ((this.fonction==null && other.getFonction()==null) || 
+             (this.fonction!=null &&
+              this.fonction.equals(other.getFonction()))) &&
             ((this.telephone==null && other.getTelephone()==null) || 
              (this.telephone!=null &&
-              this.telephone.equals(other.getTelephone())));
+              this.telephone.equals(other.getTelephone()))) &&
+            ((this.mail==null && other.getMail()==null) || 
+             (this.mail!=null &&
+              this.mail.equals(other.getMail()))) &&
+            ((this.motDePasse==null && other.getMotDePasse()==null) || 
+             (this.motDePasse!=null &&
+              this.motDePasse.equals(other.getMotDePasse())));
         __equalsCalc = null;
         return _equals;
     }
@@ -224,24 +224,24 @@ public class Employe  implements java.io.Serializable {
         }
         __hashCodeCalc = true;
         int _hashCode = 1;
-        if (getFonction() != null) {
-            _hashCode += getFonction().hashCode();
-        }
-        if (getMail() != null) {
-            _hashCode += getMail().hashCode();
-        }
         _hashCode += getMatricule();
-        if (getMotDdePasse() != null) {
-            _hashCode += getMotDdePasse().hashCode();
-        }
         if (getNom() != null) {
             _hashCode += getNom().hashCode();
         }
         if (getPrenom() != null) {
             _hashCode += getPrenom().hashCode();
         }
+        if (getFonction() != null) {
+            _hashCode += getFonction().hashCode();
+        }
         if (getTelephone() != null) {
             _hashCode += getTelephone().hashCode();
+        }
+        if (getMail() != null) {
+            _hashCode += getMail().hashCode();
+        }
+        if (getMotDePasse() != null) {
+            _hashCode += getMotDePasse().hashCode();
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -254,30 +254,9 @@ public class Employe  implements java.io.Serializable {
     static {
         typeDesc.setXmlType(new javax.xml.namespace.QName("http://services/", "employe"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("fonction");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "fonction"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("mail");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "mail"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("matricule");
         elemField.setXmlName(new javax.xml.namespace.QName("", "matricule"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("motDdePasse");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "motDdePasse"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
@@ -295,8 +274,29 @@ public class Employe  implements java.io.Serializable {
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("fonction");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "fonction"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("telephone");
         elemField.setXmlName(new javax.xml.namespace.QName("", "telephone"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("mail");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "mail"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("motDePasse");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "motDePasse"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);

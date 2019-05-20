@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<vehicules xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vehicules.xsd">
+    <vehicule>
+        <immatriculation>1</immatriculation>
+        <marque>1</marque>
+        <modele>1</modele>
+        <couleur>1</couleur>
+        <moteur>1</moteur>
+        <options>1</options>
+        <prix>1.0</prix>
+        <kilometrage>1</kilometrage>
+        <anneeVehicule>1</anneeVehicule>
+        <estLoue>false</estLoue>
+        <enVente>false</enVente>
+    </vehicule>
+</vehicules>

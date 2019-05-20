@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:complexType name="vehicule">
+    <xs:sequence>
+      <xs:element name="immatriculation" type="xs:string"/>
+      <xs:element name="marque" type="xs:string"/>
+      <xs:element name="modele" type="xs:string"/>
+      <xs:element name="couleur" type="xs:string"/>
+      <xs:element name="moteur" type="xs:string"/>
+      <xs:element name="options" type="xs:string"/>
+      <xs:element name="prix" type="xs:double"/>
+      <xs:element name="kilometrage" type="xs:int"/>
+      <xs:element name="anneeVehicule" type="xs:int"/>
+      <xs:element name="type" type="vehiculeType"/>
+      <xs:element name="estLoue" type="xs:boolean"/>
+      <xs:element name="enVente" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="vehiculeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="VOITURE"/>
+      <xs:enumeration value="MOTO"/>
+      <xs:enumeration value="SCOOTER"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
+

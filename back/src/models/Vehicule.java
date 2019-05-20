@@ -1,21 +1,44 @@
 package models;
 
+import java.util.Objects;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
+
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "vehicule", propOrder = { "immatriculation", "marque", "modele", "couleur", "moteur", "options", "prix",
+		"kilometrage", "anneeVehicule", "type", "estLoue", "enVente" })
 public class Vehicule {
 
+	@XmlElement(required = true)
 	private String immatriculation;
+	@XmlElement(required = true)
 	private String marque;
+	@XmlElement(required = true)
 	private String couleur;
+	@XmlElement(required = true)
 	private String modele;
+	@XmlElement(required = true)
 	private String options;
+	@XmlElement(required = true)
 	private String moteur;
+	@XmlElement(required = true)
 	private double prix;
+	@XmlElement(required = true)
 	private int kilometrage;
+	@XmlElement(required = true)
 	private int anneeVehicule;
+	@XmlElement(required = false)
 	private VehiculeType type;
+	@XmlElement(required = true)
 	private boolean estLoue;
+	@XmlElement(required = true)
 	private boolean enVente;
-	
-	public Vehicule() {}
+
+	public Vehicule() {
+	}
 
 	public Vehicule(String immatriculation, String marque, String couleur, String modele, String options, String moteur,
 			double prix, int kilometrage, int anneeVehicule, VehiculeType type, boolean estLoue, boolean enVente) {
@@ -132,89 +155,39 @@ public class Vehicule {
 
 	@Override
 	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + anneeVehicule;
-		result = prime * result + ((couleur == null) ? 0 : couleur.hashCode());
-		result = prime * result + (enVente ? 1231 : 1237);
-		result = prime * result + (estLoue ? 1231 : 1237);
-		result = prime * result + kilometrage;
-		result = prime * result + ((marque == null) ? 0 : marque.hashCode());
-		result = prime * result + ((modele == null) ? 0 : modele.hashCode());
-		result = prime * result + ((moteur == null) ? 0 : moteur.hashCode());
-		result = prime * result + ((options == null) ? 0 : options.hashCode());
-		long temp;
-		temp = Double.doubleToLongBits(prix);
-		result = prime * result + (int) (temp ^ (temp >>> 32));
-		result = prime * result + ((immatriculation == null) ? 0 : immatriculation.hashCode());
-		result = prime * result + ((type == null) ? 0 : type.hashCode());
-		return result;
+		return Objects.hash(immatriculation, marque, modele, couleur, moteur, options, prix, kilometrage, anneeVehicule,
+				type, estLoue, enVente);
 	}
 
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj)
+		if (this == obj) {
 			return true;
-		if (obj == null)
+		}
+		if (!(obj instanceof Vehicule)) {
 			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Vehicule other = (Vehicule) obj;
-		if (anneeVehicule != other.anneeVehicule)
-			return false;
-		if (couleur == null) {
-			if (other.couleur != null)
-				return false;
-		} else if (!couleur.equals(other.couleur))
-			return false;
-		if (enVente != other.enVente)
-			return false;
-		if (estLoue != other.estLoue)
-			return false;
-		if (kilometrage != other.kilometrage)
-			return false;
-		if (marque == null) {
-			if (other.marque != null)
-				return false;
-		} else if (!marque.equals(other.marque))
-			return false;
-		if (modele == null) {
-			if (other.modele != null)
-				return false;
-		} else if (!modele.equals(other.modele))
-			return false;
-		if (moteur == null) {
-			if (other.moteur != null)
-				return false;
-		} else if (!moteur.equals(other.moteur))
-			return false;
-		if (options == null) {
-			if (other.options != null)
-				return false;
-		} else if (!options.equals(other.options))
-			return false;
-		if (Double.doubleToLongBits(prix) != Double.doubleToLongBits(other.prix))
-			return false;
-		if (immatriculation == null) {
-			if (other.immatriculation != null)
-				return false;
-		} else if (!immatriculation.equals(other.immatriculation))
-			return false;
-		if (type != other.type)
-			return false;
-		return true;
+		}
+		Vehicule v = (Vehicule) obj;
+		return Objects.equals(immatriculation, v.immatriculation) &&
+				Objects.equals(marque, v.marque) &&
+				Objects.equals(modele, v.modele) && 
+				Objects.equals(couleur, v.couleur) &&
+				Objects.equals(moteur, v.moteur) &&
+				Objects.equals(options, v.options) &&
+				prix == v.prix &&
+				kilometrage == v.kilometrage &&
+				anneeVehicule == v.anneeVehicule &&
+				Objects.equals(type, v.type) &&
+				Objects.equals(estLoue, v.estLoue) &&
+				Objects.equals(enVente, v.enVente);
 	}
 
 	@Override
 	public String toString() {
-		return "Vehicule [immatriculation=" + immatriculation + ", marque=" + marque + ", couleur=" + couleur + ", modele=" + modele
-				+ ", options=" + options + ", moteur=" + moteur + ", prix=" + prix + ", kilometrage=" + kilometrage
-				+ ", anneeVehicule=" + anneeVehicule + ", type=" + type + ", estLoue=" + estLoue + ", enVente="
-				+ enVente + "]";
+		return "Vehicule [immatriculation=" + immatriculation + ", marque=" + marque + ", couleur=" + couleur
+				+ ", modele=" + modele + ", options=" + options + ", moteur=" + moteur + ", prix=" + prix
+				+ ", kilometrage=" + kilometrage + ", anneeVehicule=" + anneeVehicule + ", type=" + type + ", estLoue="
+				+ estLoue + ", enVente=" + enVente + "]";
 	}
-
-	
-
-	
 
 }

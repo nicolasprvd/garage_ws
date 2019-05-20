@@ -8,21 +8,13 @@
 package services;
 
 public class Vehicule  implements java.io.Serializable {
-    private int anneeVehicule;
-
-    private java.lang.String couleur;
-
-    private boolean enVente;
-
-    private boolean estLoue;
-
     private java.lang.String immatriculation;
-
-    private int kilometrage;
 
     private java.lang.String marque;
 
     private java.lang.String modele;
+
+    private java.lang.String couleur;
 
     private java.lang.String moteur;
 
@@ -30,116 +22,44 @@ public class Vehicule  implements java.io.Serializable {
 
     private double prix;
 
+    private int kilometrage;
+
+    private int anneeVehicule;
+
     private services.VehiculeType type;
+
+    private boolean estLoue;
+
+    private boolean enVente;
 
     public Vehicule() {
     }
 
     public Vehicule(
-           int anneeVehicule,
-           java.lang.String couleur,
-           boolean enVente,
-           boolean estLoue,
            java.lang.String immatriculation,
-           int kilometrage,
            java.lang.String marque,
            java.lang.String modele,
+           java.lang.String couleur,
            java.lang.String moteur,
            java.lang.String options,
            double prix,
-           services.VehiculeType type) {
-           this.anneeVehicule = anneeVehicule;
-           this.couleur = couleur;
-           this.enVente = enVente;
-           this.estLoue = estLoue;
+           int kilometrage,
+           int anneeVehicule,
+           services.VehiculeType type,
+           boolean estLoue,
+           boolean enVente) {
            this.immatriculation = immatriculation;
-           this.kilometrage = kilometrage;
            this.marque = marque;
            this.modele = modele;
+           this.couleur = couleur;
            this.moteur = moteur;
            this.options = options;
            this.prix = prix;
+           this.kilometrage = kilometrage;
+           this.anneeVehicule = anneeVehicule;
            this.type = type;
-    }
-
-
-    /**
-     * Gets the anneeVehicule value for this Vehicule.
-     * 
-     * @return anneeVehicule
-     */
-    public int getAnneeVehicule() {
-        return anneeVehicule;
-    }
-
-
-    /**
-     * Sets the anneeVehicule value for this Vehicule.
-     * 
-     * @param anneeVehicule
-     */
-    public void setAnneeVehicule(int anneeVehicule) {
-        this.anneeVehicule = anneeVehicule;
-    }
-
-
-    /**
-     * Gets the couleur value for this Vehicule.
-     * 
-     * @return couleur
-     */
-    public java.lang.String getCouleur() {
-        return couleur;
-    }
-
-
-    /**
-     * Sets the couleur value for this Vehicule.
-     * 
-     * @param couleur
-     */
-    public void setCouleur(java.lang.String couleur) {
-        this.couleur = couleur;
-    }
-
-
-    /**
-     * Gets the enVente value for this Vehicule.
-     * 
-     * @return enVente
-     */
-    public boolean isEnVente() {
-        return enVente;
-    }
-
-
-    /**
-     * Sets the enVente value for this Vehicule.
-     * 
-     * @param enVente
-     */
-    public void setEnVente(boolean enVente) {
-        this.enVente = enVente;
-    }
-
-
-    /**
-     * Gets the estLoue value for this Vehicule.
-     * 
-     * @return estLoue
-     */
-    public boolean isEstLoue() {
-        return estLoue;
-    }
-
-
-    /**
-     * Sets the estLoue value for this Vehicule.
-     * 
-     * @param estLoue
-     */
-    public void setEstLoue(boolean estLoue) {
-        this.estLoue = estLoue;
+           this.estLoue = estLoue;
+           this.enVente = enVente;
     }
 
 
@@ -160,26 +80,6 @@ public class Vehicule  implements java.io.Serializable {
      */
     public void setImmatriculation(java.lang.String immatriculation) {
         this.immatriculation = immatriculation;
-    }
-
-
-    /**
-     * Gets the kilometrage value for this Vehicule.
-     * 
-     * @return kilometrage
-     */
-    public int getKilometrage() {
-        return kilometrage;
-    }
-
-
-    /**
-     * Sets the kilometrage value for this Vehicule.
-     * 
-     * @param kilometrage
-     */
-    public void setKilometrage(int kilometrage) {
-        this.kilometrage = kilometrage;
     }
 
 
@@ -220,6 +120,26 @@ public class Vehicule  implements java.io.Serializable {
      */
     public void setModele(java.lang.String modele) {
         this.modele = modele;
+    }
+
+
+    /**
+     * Gets the couleur value for this Vehicule.
+     * 
+     * @return couleur
+     */
+    public java.lang.String getCouleur() {
+        return couleur;
+    }
+
+
+    /**
+     * Sets the couleur value for this Vehicule.
+     * 
+     * @param couleur
+     */
+    public void setCouleur(java.lang.String couleur) {
+        this.couleur = couleur;
     }
 
 
@@ -284,6 +204,46 @@ public class Vehicule  implements java.io.Serializable {
 
 
     /**
+     * Gets the kilometrage value for this Vehicule.
+     * 
+     * @return kilometrage
+     */
+    public int getKilometrage() {
+        return kilometrage;
+    }
+
+
+    /**
+     * Sets the kilometrage value for this Vehicule.
+     * 
+     * @param kilometrage
+     */
+    public void setKilometrage(int kilometrage) {
+        this.kilometrage = kilometrage;
+    }
+
+
+    /**
+     * Gets the anneeVehicule value for this Vehicule.
+     * 
+     * @return anneeVehicule
+     */
+    public int getAnneeVehicule() {
+        return anneeVehicule;
+    }
+
+
+    /**
+     * Sets the anneeVehicule value for this Vehicule.
+     * 
+     * @param anneeVehicule
+     */
+    public void setAnneeVehicule(int anneeVehicule) {
+        this.anneeVehicule = anneeVehicule;
+    }
+
+
+    /**
      * Gets the type value for this Vehicule.
      * 
      * @return type
@@ -302,6 +262,46 @@ public class Vehicule  implements java.io.Serializable {
         this.type = type;
     }
 
+
+    /**
+     * Gets the estLoue value for this Vehicule.
+     * 
+     * @return estLoue
+     */
+    public boolean isEstLoue() {
+        return estLoue;
+    }
+
+
+    /**
+     * Sets the estLoue value for this Vehicule.
+     * 
+     * @param estLoue
+     */
+    public void setEstLoue(boolean estLoue) {
+        this.estLoue = estLoue;
+    }
+
+
+    /**
+     * Gets the enVente value for this Vehicule.
+     * 
+     * @return enVente
+     */
+    public boolean isEnVente() {
+        return enVente;
+    }
+
+
+    /**
+     * Sets the enVente value for this Vehicule.
+     * 
+     * @param enVente
+     */
+    public void setEnVente(boolean enVente) {
+        this.enVente = enVente;
+    }
+
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof Vehicule)) return false;
@@ -314,22 +314,18 @@ public class Vehicule  implements java.io.Serializable {
         __equalsCalc = obj;
         boolean _equals;
         _equals = true && 
-            this.anneeVehicule == other.getAnneeVehicule() &&
-            ((this.couleur==null && other.getCouleur()==null) || 
-             (this.couleur!=null &&
-              this.couleur.equals(other.getCouleur()))) &&
-            this.enVente == other.isEnVente() &&
-            this.estLoue == other.isEstLoue() &&
             ((this.immatriculation==null && other.getImmatriculation()==null) || 
              (this.immatriculation!=null &&
               this.immatriculation.equals(other.getImmatriculation()))) &&
-            this.kilometrage == other.getKilometrage() &&
             ((this.marque==null && other.getMarque()==null) || 
              (this.marque!=null &&
               this.marque.equals(other.getMarque()))) &&
             ((this.modele==null && other.getModele()==null) || 
              (this.modele!=null &&
               this.modele.equals(other.getModele()))) &&
+            ((this.couleur==null && other.getCouleur()==null) || 
+             (this.couleur!=null &&
+              this.couleur.equals(other.getCouleur()))) &&
             ((this.moteur==null && other.getMoteur()==null) || 
              (this.moteur!=null &&
               this.moteur.equals(other.getMoteur()))) &&
@@ -337,9 +333,13 @@ public class Vehicule  implements java.io.Serializable {
              (this.options!=null &&
               this.options.equals(other.getOptions()))) &&
             this.prix == other.getPrix() &&
+            this.kilometrage == other.getKilometrage() &&
+            this.anneeVehicule == other.getAnneeVehicule() &&
             ((this.type==null && other.getType()==null) || 
              (this.type!=null &&
-              this.type.equals(other.getType())));
+              this.type.equals(other.getType()))) &&
+            this.estLoue == other.isEstLoue() &&
+            this.enVente == other.isEnVente();
         __equalsCalc = null;
         return _equals;
     }
@@ -351,21 +351,17 @@ public class Vehicule  implements java.io.Serializable {
         }
         __hashCodeCalc = true;
         int _hashCode = 1;
-        _hashCode += getAnneeVehicule();
-        if (getCouleur() != null) {
-            _hashCode += getCouleur().hashCode();
-        }
-        _hashCode += (isEnVente() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        _hashCode += (isEstLoue() ? Boolean.TRUE : Boolean.FALSE).hashCode();
         if (getImmatriculation() != null) {
             _hashCode += getImmatriculation().hashCode();
         }
-        _hashCode += getKilometrage();
         if (getMarque() != null) {
             _hashCode += getMarque().hashCode();
         }
         if (getModele() != null) {
             _hashCode += getModele().hashCode();
+        }
+        if (getCouleur() != null) {
+            _hashCode += getCouleur().hashCode();
         }
         if (getMoteur() != null) {
             _hashCode += getMoteur().hashCode();
@@ -374,9 +370,13 @@ public class Vehicule  implements java.io.Serializable {
             _hashCode += getOptions().hashCode();
         }
         _hashCode += new Double(getPrix()).hashCode();
+        _hashCode += getKilometrage();
+        _hashCode += getAnneeVehicule();
         if (getType() != null) {
             _hashCode += getType().hashCode();
         }
+        _hashCode += (isEstLoue() ? Boolean.TRUE : Boolean.FALSE).hashCode();
+        _hashCode += (isEnVente() ? Boolean.TRUE : Boolean.FALSE).hashCode();
         __hashCodeCalc = false;
         return _hashCode;
     }
@@ -388,69 +388,39 @@ public class Vehicule  implements java.io.Serializable {
     static {
         typeDesc.setXmlType(new javax.xml.namespace.QName("http://services/", "vehicule"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("anneeVehicule");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "anneeVehicule"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("couleur");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "couleur"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enVente");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "enVente"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("estLoue");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "estLoue"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("immatriculation");
         elemField.setXmlName(new javax.xml.namespace.QName("", "immatriculation"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("kilometrage");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "kilometrage"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("marque");
         elemField.setXmlName(new javax.xml.namespace.QName("", "marque"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("modele");
         elemField.setXmlName(new javax.xml.namespace.QName("", "modele"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("couleur");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "couleur"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("moteur");
         elemField.setXmlName(new javax.xml.namespace.QName("", "moteur"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("options");
         elemField.setXmlName(new javax.xml.namespace.QName("", "options"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
@@ -460,10 +430,34 @@ public class Vehicule  implements java.io.Serializable {
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("kilometrage");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "kilometrage"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("anneeVehicule");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "anneeVehicule"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("type");
         elemField.setXmlName(new javax.xml.namespace.QName("", "type"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://services/", "vehiculeType"));
         elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("estLoue");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "estLoue"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("enVente");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "enVente"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

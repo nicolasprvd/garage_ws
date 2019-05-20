@@ -44,22 +44,16 @@ public class GestionGarageServiceProxy implements services.GestionGarageService 
     return gestionGarageService;
   }
   
-  public services.Vehicule[] getVehicules() throws java.rmi.RemoteException{
-    if (gestionGarageService == null)
-      _initGestionGarageServiceProxy();
-    return gestionGarageService.getVehicules();
-  }
-  
   public void ajouterVehicule(services.Vehicule vehicule) throws java.rmi.RemoteException{
     if (gestionGarageService == null)
       _initGestionGarageServiceProxy();
     gestionGarageService.ajouterVehicule(vehicule);
   }
   
-  public void supprimerVehicule(services.Vehicule vehicule) throws java.rmi.RemoteException{
+  public services.Vehicule[] getVehicules() throws java.rmi.RemoteException{
     if (gestionGarageService == null)
       _initGestionGarageServiceProxy();
-    gestionGarageService.supprimerVehicule(vehicule);
+    return gestionGarageService.getVehicules();
   }
   
   public services.Vehicule[] getVehiculesParPrix(double prix) throws java.rmi.RemoteException{
@@ -68,28 +62,22 @@ public class GestionGarageServiceProxy implements services.GestionGarageService 
     return gestionGarageService.getVehiculesParPrix(prix);
   }
   
-  public services.Vehicule[] getVehiculesParType(services.VehiculeType type) throws java.rmi.RemoteException{
-    if (gestionGarageService == null)
-      _initGestionGarageServiceProxy();
-    return gestionGarageService.getVehiculesParType(type);
-  }
-  
   public services.Vehicule[] getVehiculesParMarque(java.lang.String marque) throws java.rmi.RemoteException{
     if (gestionGarageService == null)
       _initGestionGarageServiceProxy();
     return gestionGarageService.getVehiculesParMarque(marque);
   }
   
-  public services.Employe[] getEmployes() throws java.rmi.RemoteException{
+  public services.Vehicule[] getVehiculesParType(services.VehiculeType type) throws java.rmi.RemoteException{
     if (gestionGarageService == null)
       _initGestionGarageServiceProxy();
-    return gestionGarageService.getEmployes();
+    return gestionGarageService.getVehiculesParType(type);
   }
   
-  public void ajouterEmploye(services.Employe arg0) throws java.rmi.RemoteException{
+  public void supprimerVehicule(services.Vehicule vehicule) throws java.rmi.RemoteException{
     if (gestionGarageService == null)
       _initGestionGarageServiceProxy();
-    gestionGarageService.ajouterEmploye(arg0);
+    gestionGarageService.supprimerVehicule(vehicule);
   }
   
   public void supprimerEmploye(services.Employe employe) throws java.rmi.RemoteException{
@@ -98,22 +86,34 @@ public class GestionGarageServiceProxy implements services.GestionGarageService 
     gestionGarageService.supprimerEmploye(employe);
   }
   
-  public void achatVehicule(services.Vehicule arg0) throws java.rmi.RemoteException{
-    if (gestionGarageService == null)
-      _initGestionGarageServiceProxy();
-    gestionGarageService.achatVehicule(arg0);
-  }
-  
   public void locationVehicule(services.Vehicule arg0) throws java.rmi.RemoteException{
     if (gestionGarageService == null)
       _initGestionGarageServiceProxy();
     gestionGarageService.locationVehicule(arg0);
   }
   
+  public services.Employe[] getEmployes() throws java.rmi.RemoteException{
+    if (gestionGarageService == null)
+      _initGestionGarageServiceProxy();
+    return gestionGarageService.getEmployes();
+  }
+  
+  public void achatVehicule(services.Vehicule arg0) throws java.rmi.RemoteException{
+    if (gestionGarageService == null)
+      _initGestionGarageServiceProxy();
+    gestionGarageService.achatVehicule(arg0);
+  }
+  
   public services.Vehicule getVehicule(java.lang.String immatriculation) throws java.rmi.RemoteException{
     if (gestionGarageService == null)
       _initGestionGarageServiceProxy();
     return gestionGarageService.getVehicule(immatriculation);
+  }
+  
+  public void ajouterEmploye(services.Employe arg0) throws java.rmi.RemoteException{
+    if (gestionGarageService == null)
+      _initGestionGarageServiceProxy();
+    gestionGarageService.ajouterEmploye(arg0);
   }
   
   

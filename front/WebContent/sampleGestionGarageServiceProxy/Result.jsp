@@ -64,60 +64,42 @@ if(getGestionGarageService10mtemp == null){
 break;
 case 17:
         gotMethod = true;
-        services.Vehicule[] getVehicules17mtemp = sampleGestionGarageServiceProxyid.getVehicules();
-if(getVehicules17mtemp == null){
-%>
-<%=getVehicules17mtemp %>
-<%
-}else{
-        String tempreturnp18 = null;
-        if(getVehicules17mtemp != null){
-        java.util.List listreturnp18= java.util.Arrays.asList(getVehicules17mtemp);
-        tempreturnp18 = listreturnp18.toString();
-        }
-        %>
-        <%=tempreturnp18%>
-        <%
-}
-break;
-case 20:
-        gotMethod = true;
-        String kilometrage_2id=  request.getParameter("kilometrage25");
+        String kilometrage_2id=  request.getParameter("kilometrage22");
         int kilometrage_2idTemp  = Integer.parseInt(kilometrage_2id);
-        String estLoue_3id=  request.getParameter("estLoue27");
+        String estLoue_3id=  request.getParameter("estLoue24");
         boolean estLoue_3idTemp  = Boolean.valueOf(estLoue_3id).booleanValue();
-        String anneeVehicule_4id=  request.getParameter("anneeVehicule29");
+        String anneeVehicule_4id=  request.getParameter("anneeVehicule26");
         int anneeVehicule_4idTemp  = Integer.parseInt(anneeVehicule_4id);
-        String modele_5id=  request.getParameter("modele31");
+        String modele_5id=  request.getParameter("modele28");
             java.lang.String modele_5idTemp = null;
         if(!modele_5id.equals("")){
          modele_5idTemp  = modele_5id;
         }
-        String immatriculation_6id=  request.getParameter("immatriculation33");
+        String immatriculation_6id=  request.getParameter("immatriculation30");
             java.lang.String immatriculation_6idTemp = null;
         if(!immatriculation_6id.equals("")){
          immatriculation_6idTemp  = immatriculation_6id;
         }
-        String couleur_7id=  request.getParameter("couleur35");
-            java.lang.String couleur_7idTemp = null;
-        if(!couleur_7id.equals("")){
-         couleur_7idTemp  = couleur_7id;
+        String marque_7id=  request.getParameter("marque32");
+            java.lang.String marque_7idTemp = null;
+        if(!marque_7id.equals("")){
+         marque_7idTemp  = marque_7id;
         }
-        String marque_8id=  request.getParameter("marque37");
-            java.lang.String marque_8idTemp = null;
-        if(!marque_8id.equals("")){
-         marque_8idTemp  = marque_8id;
+        String couleur_8id=  request.getParameter("couleur34");
+            java.lang.String couleur_8idTemp = null;
+        if(!couleur_8id.equals("")){
+         couleur_8idTemp  = couleur_8id;
         }
-        String prix_9id=  request.getParameter("prix39");
-        double prix_9idTemp  = Double.parseDouble(prix_9id);
-        String moteur_10id=  request.getParameter("moteur41");
-            java.lang.String moteur_10idTemp = null;
-        if(!moteur_10id.equals("")){
-         moteur_10idTemp  = moteur_10id;
+        String moteur_9id=  request.getParameter("moteur36");
+            java.lang.String moteur_9idTemp = null;
+        if(!moteur_9id.equals("")){
+         moteur_9idTemp  = moteur_9id;
         }
-        String enVente_11id=  request.getParameter("enVente43");
+        String prix_10id=  request.getParameter("prix38");
+        double prix_10idTemp  = Double.parseDouble(prix_10id);
+        String enVente_11id=  request.getParameter("enVente40");
         boolean enVente_11idTemp  = Boolean.valueOf(enVente_11id).booleanValue();
-        String options_12id=  request.getParameter("options45");
+        String options_12id=  request.getParameter("options42");
             java.lang.String options_12idTemp = null;
         if(!options_12id.equals("")){
          options_12idTemp  = options_12id;
@@ -130,163 +112,163 @@ case 20:
         services1Vehicule_1id.setAnneeVehicule(anneeVehicule_4idTemp);
         services1Vehicule_1id.setModele(modele_5idTemp);
         services1Vehicule_1id.setImmatriculation(immatriculation_6idTemp);
-        services1Vehicule_1id.setCouleur(couleur_7idTemp);
-        services1Vehicule_1id.setMarque(marque_8idTemp);
-        services1Vehicule_1id.setPrix(prix_9idTemp);
-        services1Vehicule_1id.setMoteur(moteur_10idTemp);
+        services1Vehicule_1id.setMarque(marque_7idTemp);
+        services1Vehicule_1id.setCouleur(couleur_8idTemp);
+        services1Vehicule_1id.setMoteur(moteur_9idTemp);
+        services1Vehicule_1id.setPrix(prix_10idTemp);
         services1Vehicule_1id.setEnVente(enVente_11idTemp);
         services1Vehicule_1id.setOptions(options_12idTemp);
         sampleGestionGarageServiceProxyid.ajouterVehicule(services1Vehicule_1id);
 break;
+case 44:
+        gotMethod = true;
+        services.Vehicule[] getVehicules44mtemp = sampleGestionGarageServiceProxyid.getVehicules();
+if(getVehicules44mtemp == null){
+%>
+<%=getVehicules44mtemp %>
+<%
+}else{
+        String tempreturnp45 = null;
+        if(getVehicules44mtemp != null){
+        java.util.List listreturnp45= java.util.Arrays.asList(getVehicules44mtemp);
+        tempreturnp45 = listreturnp45.toString();
+        }
+        %>
+        <%=tempreturnp45%>
+        <%
+}
+break;
 case 47:
         gotMethod = true;
-        String kilometrage_14id=  request.getParameter("kilometrage52");
-        int kilometrage_14idTemp  = Integer.parseInt(kilometrage_14id);
-        String estLoue_15id=  request.getParameter("estLoue54");
-        boolean estLoue_15idTemp  = Boolean.valueOf(estLoue_15id).booleanValue();
-        String anneeVehicule_16id=  request.getParameter("anneeVehicule56");
-        int anneeVehicule_16idTemp  = Integer.parseInt(anneeVehicule_16id);
-        String modele_17id=  request.getParameter("modele58");
-            java.lang.String modele_17idTemp = null;
-        if(!modele_17id.equals("")){
-         modele_17idTemp  = modele_17id;
-        }
-        String immatriculation_18id=  request.getParameter("immatriculation60");
-            java.lang.String immatriculation_18idTemp = null;
-        if(!immatriculation_18id.equals("")){
-         immatriculation_18idTemp  = immatriculation_18id;
-        }
-        String couleur_19id=  request.getParameter("couleur62");
-            java.lang.String couleur_19idTemp = null;
-        if(!couleur_19id.equals("")){
-         couleur_19idTemp  = couleur_19id;
-        }
-        String marque_20id=  request.getParameter("marque64");
-            java.lang.String marque_20idTemp = null;
-        if(!marque_20id.equals("")){
-         marque_20idTemp  = marque_20id;
-        }
-        String prix_21id=  request.getParameter("prix66");
-        double prix_21idTemp  = Double.parseDouble(prix_21id);
-        String moteur_22id=  request.getParameter("moteur68");
-            java.lang.String moteur_22idTemp = null;
-        if(!moteur_22id.equals("")){
-         moteur_22idTemp  = moteur_22id;
-        }
-        String enVente_23id=  request.getParameter("enVente70");
-        boolean enVente_23idTemp  = Boolean.valueOf(enVente_23id).booleanValue();
-        String options_24id=  request.getParameter("options72");
-            java.lang.String options_24idTemp = null;
-        if(!options_24id.equals("")){
-         options_24idTemp  = options_24id;
-        }
-        %>
-        <jsp:useBean id="services1Vehicule_13id" scope="session" class="services.Vehicule" />
-        <%
-        services1Vehicule_13id.setKilometrage(kilometrage_14idTemp);
-        services1Vehicule_13id.setEstLoue(estLoue_15idTemp);
-        services1Vehicule_13id.setAnneeVehicule(anneeVehicule_16idTemp);
-        services1Vehicule_13id.setModele(modele_17idTemp);
-        services1Vehicule_13id.setImmatriculation(immatriculation_18idTemp);
-        services1Vehicule_13id.setCouleur(couleur_19idTemp);
-        services1Vehicule_13id.setMarque(marque_20idTemp);
-        services1Vehicule_13id.setPrix(prix_21idTemp);
-        services1Vehicule_13id.setMoteur(moteur_22idTemp);
-        services1Vehicule_13id.setEnVente(enVente_23idTemp);
-        services1Vehicule_13id.setOptions(options_24idTemp);
-        sampleGestionGarageServiceProxyid.supprimerVehicule(services1Vehicule_13id);
-break;
-case 74:
-        gotMethod = true;
-        String prix_25id=  request.getParameter("prix77");
-        double prix_25idTemp  = Double.parseDouble(prix_25id);
-        services.Vehicule[] getVehiculesParPrix74mtemp = sampleGestionGarageServiceProxyid.getVehiculesParPrix(prix_25idTemp);
-if(getVehiculesParPrix74mtemp == null){
+        String prix_13id=  request.getParameter("prix50");
+        double prix_13idTemp  = Double.parseDouble(prix_13id);
+        services.Vehicule[] getVehiculesParPrix47mtemp = sampleGestionGarageServiceProxyid.getVehiculesParPrix(prix_13idTemp);
+if(getVehiculesParPrix47mtemp == null){
 %>
-<%=getVehiculesParPrix74mtemp %>
+<%=getVehiculesParPrix47mtemp %>
 <%
 }else{
-        String tempreturnp75 = null;
-        if(getVehiculesParPrix74mtemp != null){
-        java.util.List listreturnp75= java.util.Arrays.asList(getVehiculesParPrix74mtemp);
-        tempreturnp75 = listreturnp75.toString();
+        String tempreturnp48 = null;
+        if(getVehiculesParPrix47mtemp != null){
+        java.util.List listreturnp48= java.util.Arrays.asList(getVehiculesParPrix47mtemp);
+        tempreturnp48 = listreturnp48.toString();
         }
         %>
-        <%=tempreturnp75%>
+        <%=tempreturnp48%>
         <%
 }
 break;
-case 79:
+case 52:
         gotMethod = true;
-        String marque_26id=  request.getParameter("marque82");
-            java.lang.String marque_26idTemp = null;
-        if(!marque_26id.equals("")){
-         marque_26idTemp  = marque_26id;
+        String marque_14id=  request.getParameter("marque55");
+            java.lang.String marque_14idTemp = null;
+        if(!marque_14id.equals("")){
+         marque_14idTemp  = marque_14id;
         }
-        services.Vehicule[] getVehiculesParMarque79mtemp = sampleGestionGarageServiceProxyid.getVehiculesParMarque(marque_26idTemp);
-if(getVehiculesParMarque79mtemp == null){
+        services.Vehicule[] getVehiculesParMarque52mtemp = sampleGestionGarageServiceProxyid.getVehiculesParMarque(marque_14idTemp);
+if(getVehiculesParMarque52mtemp == null){
 %>
-<%=getVehiculesParMarque79mtemp %>
+<%=getVehiculesParMarque52mtemp %>
 <%
 }else{
-        String tempreturnp80 = null;
-        if(getVehiculesParMarque79mtemp != null){
-        java.util.List listreturnp80= java.util.Arrays.asList(getVehiculesParMarque79mtemp);
-        tempreturnp80 = listreturnp80.toString();
+        String tempreturnp53 = null;
+        if(getVehiculesParMarque52mtemp != null){
+        java.util.List listreturnp53= java.util.Arrays.asList(getVehiculesParMarque52mtemp);
+        tempreturnp53 = listreturnp53.toString();
         }
         %>
-        <%=tempreturnp80%>
+        <%=tempreturnp53%>
         <%
 }
+break;
+case 57:
+        gotMethod = true;
+        String kilometrage_16id=  request.getParameter("kilometrage62");
+        int kilometrage_16idTemp  = Integer.parseInt(kilometrage_16id);
+        String estLoue_17id=  request.getParameter("estLoue64");
+        boolean estLoue_17idTemp  = Boolean.valueOf(estLoue_17id).booleanValue();
+        String anneeVehicule_18id=  request.getParameter("anneeVehicule66");
+        int anneeVehicule_18idTemp  = Integer.parseInt(anneeVehicule_18id);
+        String modele_19id=  request.getParameter("modele68");
+            java.lang.String modele_19idTemp = null;
+        if(!modele_19id.equals("")){
+         modele_19idTemp  = modele_19id;
+        }
+        String immatriculation_20id=  request.getParameter("immatriculation70");
+            java.lang.String immatriculation_20idTemp = null;
+        if(!immatriculation_20id.equals("")){
+         immatriculation_20idTemp  = immatriculation_20id;
+        }
+        String marque_21id=  request.getParameter("marque72");
+            java.lang.String marque_21idTemp = null;
+        if(!marque_21id.equals("")){
+         marque_21idTemp  = marque_21id;
+        }
+        String couleur_22id=  request.getParameter("couleur74");
+            java.lang.String couleur_22idTemp = null;
+        if(!couleur_22id.equals("")){
+         couleur_22idTemp  = couleur_22id;
+        }
+        String moteur_23id=  request.getParameter("moteur76");
+            java.lang.String moteur_23idTemp = null;
+        if(!moteur_23id.equals("")){
+         moteur_23idTemp  = moteur_23id;
+        }
+        String prix_24id=  request.getParameter("prix78");
+        double prix_24idTemp  = Double.parseDouble(prix_24id);
+        String enVente_25id=  request.getParameter("enVente80");
+        boolean enVente_25idTemp  = Boolean.valueOf(enVente_25id).booleanValue();
+        String options_26id=  request.getParameter("options82");
+            java.lang.String options_26idTemp = null;
+        if(!options_26id.equals("")){
+         options_26idTemp  = options_26id;
+        }
+        %>
+        <jsp:useBean id="services1Vehicule_15id" scope="session" class="services.Vehicule" />
+        <%
+        services1Vehicule_15id.setKilometrage(kilometrage_16idTemp);
+        services1Vehicule_15id.setEstLoue(estLoue_17idTemp);
+        services1Vehicule_15id.setAnneeVehicule(anneeVehicule_18idTemp);
+        services1Vehicule_15id.setModele(modele_19idTemp);
+        services1Vehicule_15id.setImmatriculation(immatriculation_20idTemp);
+        services1Vehicule_15id.setMarque(marque_21idTemp);
+        services1Vehicule_15id.setCouleur(couleur_22idTemp);
+        services1Vehicule_15id.setMoteur(moteur_23idTemp);
+        services1Vehicule_15id.setPrix(prix_24idTemp);
+        services1Vehicule_15id.setEnVente(enVente_25idTemp);
+        services1Vehicule_15id.setOptions(options_26idTemp);
+        sampleGestionGarageServiceProxyid.supprimerVehicule(services1Vehicule_15id);
 break;
 case 84:
         gotMethod = true;
-        services.Employe[] getEmployes84mtemp = sampleGestionGarageServiceProxyid.getEmployes();
-if(getEmployes84mtemp == null){
-%>
-<%=getEmployes84mtemp %>
-<%
-}else{
-        String tempreturnp85 = null;
-        if(getEmployes84mtemp != null){
-        java.util.List listreturnp85= java.util.Arrays.asList(getEmployes84mtemp);
-        tempreturnp85 = listreturnp85.toString();
+        String mail_28id=  request.getParameter("mail89");
+            java.lang.String mail_28idTemp = null;
+        if(!mail_28id.equals("")){
+         mail_28idTemp  = mail_28id;
         }
-        %>
-        <%=tempreturnp85%>
-        <%
-}
-break;
-case 87:
-        gotMethod = true;
-        String telephone_28id=  request.getParameter("telephone92");
-            java.lang.String telephone_28idTemp = null;
-        if(!telephone_28id.equals("")){
-         telephone_28idTemp  = telephone_28id;
+        String telephone_29id=  request.getParameter("telephone91");
+            java.lang.String telephone_29idTemp = null;
+        if(!telephone_29id.equals("")){
+         telephone_29idTemp  = telephone_29id;
         }
-        String nom_29id=  request.getParameter("nom94");
-            java.lang.String nom_29idTemp = null;
-        if(!nom_29id.equals("")){
-         nom_29idTemp  = nom_29id;
+        String nom_30id=  request.getParameter("nom93");
+            java.lang.String nom_30idTemp = null;
+        if(!nom_30id.equals("")){
+         nom_30idTemp  = nom_30id;
         }
-        String mail_30id=  request.getParameter("mail96");
-            java.lang.String mail_30idTemp = null;
-        if(!mail_30id.equals("")){
-         mail_30idTemp  = mail_30id;
+        String fonction_31id=  request.getParameter("fonction95");
+            java.lang.String fonction_31idTemp = null;
+        if(!fonction_31id.equals("")){
+         fonction_31idTemp  = fonction_31id;
         }
-        String motDdePasse_31id=  request.getParameter("motDdePasse98");
-            java.lang.String motDdePasse_31idTemp = null;
-        if(!motDdePasse_31id.equals("")){
-         motDdePasse_31idTemp  = motDdePasse_31id;
+        String matricule_32id=  request.getParameter("matricule97");
+        int matricule_32idTemp  = Integer.parseInt(matricule_32id);
+        String motDePasse_33id=  request.getParameter("motDePasse99");
+            java.lang.String motDePasse_33idTemp = null;
+        if(!motDePasse_33id.equals("")){
+         motDePasse_33idTemp  = motDePasse_33id;
         }
-        String fonction_32id=  request.getParameter("fonction100");
-            java.lang.String fonction_32idTemp = null;
-        if(!fonction_32id.equals("")){
-         fonction_32idTemp  = fonction_32id;
-        }
-        String matricule_33id=  request.getParameter("matricule102");
-        int matricule_33idTemp  = Integer.parseInt(matricule_33id);
-        String prenom_34id=  request.getParameter("prenom104");
+        String prenom_34id=  request.getParameter("prenom101");
             java.lang.String prenom_34idTemp = null;
         if(!prenom_34id.equals("")){
          prenom_34idTemp  = prenom_34id;
@@ -294,188 +276,160 @@ case 87:
         %>
         <jsp:useBean id="services1Employe_27id" scope="session" class="services.Employe" />
         <%
-        services1Employe_27id.setTelephone(telephone_28idTemp);
-        services1Employe_27id.setNom(nom_29idTemp);
-        services1Employe_27id.setMail(mail_30idTemp);
-        services1Employe_27id.setMotDdePasse(motDdePasse_31idTemp);
-        services1Employe_27id.setFonction(fonction_32idTemp);
-        services1Employe_27id.setMatricule(matricule_33idTemp);
+        services1Employe_27id.setMail(mail_28idTemp);
+        services1Employe_27id.setTelephone(telephone_29idTemp);
+        services1Employe_27id.setNom(nom_30idTemp);
+        services1Employe_27id.setFonction(fonction_31idTemp);
+        services1Employe_27id.setMatricule(matricule_32idTemp);
+        services1Employe_27id.setMotDePasse(motDePasse_33idTemp);
         services1Employe_27id.setPrenom(prenom_34idTemp);
-        sampleGestionGarageServiceProxyid.ajouterEmploye(services1Employe_27id);
+        sampleGestionGarageServiceProxyid.supprimerEmploye(services1Employe_27id);
 break;
-case 106:
+case 103:
         gotMethod = true;
-        String telephone_36id=  request.getParameter("telephone111");
-            java.lang.String telephone_36idTemp = null;
-        if(!telephone_36id.equals("")){
-         telephone_36idTemp  = telephone_36id;
+        String kilometrage_36id=  request.getParameter("kilometrage108");
+        int kilometrage_36idTemp  = Integer.parseInt(kilometrage_36id);
+        String estLoue_37id=  request.getParameter("estLoue110");
+        boolean estLoue_37idTemp  = Boolean.valueOf(estLoue_37id).booleanValue();
+        String anneeVehicule_38id=  request.getParameter("anneeVehicule112");
+        int anneeVehicule_38idTemp  = Integer.parseInt(anneeVehicule_38id);
+        String modele_39id=  request.getParameter("modele114");
+            java.lang.String modele_39idTemp = null;
+        if(!modele_39id.equals("")){
+         modele_39idTemp  = modele_39id;
         }
-        String nom_37id=  request.getParameter("nom113");
-            java.lang.String nom_37idTemp = null;
-        if(!nom_37id.equals("")){
-         nom_37idTemp  = nom_37id;
+        String immatriculation_40id=  request.getParameter("immatriculation116");
+            java.lang.String immatriculation_40idTemp = null;
+        if(!immatriculation_40id.equals("")){
+         immatriculation_40idTemp  = immatriculation_40id;
         }
-        String mail_38id=  request.getParameter("mail115");
-            java.lang.String mail_38idTemp = null;
-        if(!mail_38id.equals("")){
-         mail_38idTemp  = mail_38id;
+        String marque_41id=  request.getParameter("marque118");
+            java.lang.String marque_41idTemp = null;
+        if(!marque_41id.equals("")){
+         marque_41idTemp  = marque_41id;
         }
-        String motDdePasse_39id=  request.getParameter("motDdePasse117");
-            java.lang.String motDdePasse_39idTemp = null;
-        if(!motDdePasse_39id.equals("")){
-         motDdePasse_39idTemp  = motDdePasse_39id;
+        String couleur_42id=  request.getParameter("couleur120");
+            java.lang.String couleur_42idTemp = null;
+        if(!couleur_42id.equals("")){
+         couleur_42idTemp  = couleur_42id;
         }
-        String fonction_40id=  request.getParameter("fonction119");
-            java.lang.String fonction_40idTemp = null;
-        if(!fonction_40id.equals("")){
-         fonction_40idTemp  = fonction_40id;
+        String moteur_43id=  request.getParameter("moteur122");
+            java.lang.String moteur_43idTemp = null;
+        if(!moteur_43id.equals("")){
+         moteur_43idTemp  = moteur_43id;
         }
-        String matricule_41id=  request.getParameter("matricule121");
-        int matricule_41idTemp  = Integer.parseInt(matricule_41id);
-        String prenom_42id=  request.getParameter("prenom123");
-            java.lang.String prenom_42idTemp = null;
-        if(!prenom_42id.equals("")){
-         prenom_42idTemp  = prenom_42id;
+        String prix_44id=  request.getParameter("prix124");
+        double prix_44idTemp  = Double.parseDouble(prix_44id);
+        String enVente_45id=  request.getParameter("enVente126");
+        boolean enVente_45idTemp  = Boolean.valueOf(enVente_45id).booleanValue();
+        String options_46id=  request.getParameter("options128");
+            java.lang.String options_46idTemp = null;
+        if(!options_46id.equals("")){
+         options_46idTemp  = options_46id;
         }
         %>
-        <jsp:useBean id="services1Employe_35id" scope="session" class="services.Employe" />
+        <jsp:useBean id="services1Vehicule_35id" scope="session" class="services.Vehicule" />
         <%
-        services1Employe_35id.setTelephone(telephone_36idTemp);
-        services1Employe_35id.setNom(nom_37idTemp);
-        services1Employe_35id.setMail(mail_38idTemp);
-        services1Employe_35id.setMotDdePasse(motDdePasse_39idTemp);
-        services1Employe_35id.setFonction(fonction_40idTemp);
-        services1Employe_35id.setMatricule(matricule_41idTemp);
-        services1Employe_35id.setPrenom(prenom_42idTemp);
-        sampleGestionGarageServiceProxyid.supprimerEmploye(services1Employe_35id);
+        services1Vehicule_35id.setKilometrage(kilometrage_36idTemp);
+        services1Vehicule_35id.setEstLoue(estLoue_37idTemp);
+        services1Vehicule_35id.setAnneeVehicule(anneeVehicule_38idTemp);
+        services1Vehicule_35id.setModele(modele_39idTemp);
+        services1Vehicule_35id.setImmatriculation(immatriculation_40idTemp);
+        services1Vehicule_35id.setMarque(marque_41idTemp);
+        services1Vehicule_35id.setCouleur(couleur_42idTemp);
+        services1Vehicule_35id.setMoteur(moteur_43idTemp);
+        services1Vehicule_35id.setPrix(prix_44idTemp);
+        services1Vehicule_35id.setEnVente(enVente_45idTemp);
+        services1Vehicule_35id.setOptions(options_46idTemp);
+        sampleGestionGarageServiceProxyid.locationVehicule(services1Vehicule_35id);
 break;
-case 125:
+case 130:
         gotMethod = true;
-        String kilometrage_44id=  request.getParameter("kilometrage130");
-        int kilometrage_44idTemp  = Integer.parseInt(kilometrage_44id);
-        String estLoue_45id=  request.getParameter("estLoue132");
-        boolean estLoue_45idTemp  = Boolean.valueOf(estLoue_45id).booleanValue();
-        String anneeVehicule_46id=  request.getParameter("anneeVehicule134");
-        int anneeVehicule_46idTemp  = Integer.parseInt(anneeVehicule_46id);
-        String modele_47id=  request.getParameter("modele136");
-            java.lang.String modele_47idTemp = null;
-        if(!modele_47id.equals("")){
-         modele_47idTemp  = modele_47id;
-        }
-        String immatriculation_48id=  request.getParameter("immatriculation138");
-            java.lang.String immatriculation_48idTemp = null;
-        if(!immatriculation_48id.equals("")){
-         immatriculation_48idTemp  = immatriculation_48id;
-        }
-        String couleur_49id=  request.getParameter("couleur140");
-            java.lang.String couleur_49idTemp = null;
-        if(!couleur_49id.equals("")){
-         couleur_49idTemp  = couleur_49id;
-        }
-        String marque_50id=  request.getParameter("marque142");
-            java.lang.String marque_50idTemp = null;
-        if(!marque_50id.equals("")){
-         marque_50idTemp  = marque_50id;
-        }
-        String prix_51id=  request.getParameter("prix144");
-        double prix_51idTemp  = Double.parseDouble(prix_51id);
-        String moteur_52id=  request.getParameter("moteur146");
-            java.lang.String moteur_52idTemp = null;
-        if(!moteur_52id.equals("")){
-         moteur_52idTemp  = moteur_52id;
-        }
-        String enVente_53id=  request.getParameter("enVente148");
-        boolean enVente_53idTemp  = Boolean.valueOf(enVente_53id).booleanValue();
-        String options_54id=  request.getParameter("options150");
-            java.lang.String options_54idTemp = null;
-        if(!options_54id.equals("")){
-         options_54idTemp  = options_54id;
-        }
-        %>
-        <jsp:useBean id="services1Vehicule_43id" scope="session" class="services.Vehicule" />
-        <%
-        services1Vehicule_43id.setKilometrage(kilometrage_44idTemp);
-        services1Vehicule_43id.setEstLoue(estLoue_45idTemp);
-        services1Vehicule_43id.setAnneeVehicule(anneeVehicule_46idTemp);
-        services1Vehicule_43id.setModele(modele_47idTemp);
-        services1Vehicule_43id.setImmatriculation(immatriculation_48idTemp);
-        services1Vehicule_43id.setCouleur(couleur_49idTemp);
-        services1Vehicule_43id.setMarque(marque_50idTemp);
-        services1Vehicule_43id.setPrix(prix_51idTemp);
-        services1Vehicule_43id.setMoteur(moteur_52idTemp);
-        services1Vehicule_43id.setEnVente(enVente_53idTemp);
-        services1Vehicule_43id.setOptions(options_54idTemp);
-        sampleGestionGarageServiceProxyid.achatVehicule(services1Vehicule_43id);
-break;
-case 152:
-        gotMethod = true;
-        String kilometrage_56id=  request.getParameter("kilometrage157");
-        int kilometrage_56idTemp  = Integer.parseInt(kilometrage_56id);
-        String estLoue_57id=  request.getParameter("estLoue159");
-        boolean estLoue_57idTemp  = Boolean.valueOf(estLoue_57id).booleanValue();
-        String anneeVehicule_58id=  request.getParameter("anneeVehicule161");
-        int anneeVehicule_58idTemp  = Integer.parseInt(anneeVehicule_58id);
-        String modele_59id=  request.getParameter("modele163");
-            java.lang.String modele_59idTemp = null;
-        if(!modele_59id.equals("")){
-         modele_59idTemp  = modele_59id;
-        }
-        String immatriculation_60id=  request.getParameter("immatriculation165");
-            java.lang.String immatriculation_60idTemp = null;
-        if(!immatriculation_60id.equals("")){
-         immatriculation_60idTemp  = immatriculation_60id;
-        }
-        String couleur_61id=  request.getParameter("couleur167");
-            java.lang.String couleur_61idTemp = null;
-        if(!couleur_61id.equals("")){
-         couleur_61idTemp  = couleur_61id;
-        }
-        String marque_62id=  request.getParameter("marque169");
-            java.lang.String marque_62idTemp = null;
-        if(!marque_62id.equals("")){
-         marque_62idTemp  = marque_62id;
-        }
-        String prix_63id=  request.getParameter("prix171");
-        double prix_63idTemp  = Double.parseDouble(prix_63id);
-        String moteur_64id=  request.getParameter("moteur173");
-            java.lang.String moteur_64idTemp = null;
-        if(!moteur_64id.equals("")){
-         moteur_64idTemp  = moteur_64id;
-        }
-        String enVente_65id=  request.getParameter("enVente175");
-        boolean enVente_65idTemp  = Boolean.valueOf(enVente_65id).booleanValue();
-        String options_66id=  request.getParameter("options177");
-            java.lang.String options_66idTemp = null;
-        if(!options_66id.equals("")){
-         options_66idTemp  = options_66id;
-        }
-        %>
-        <jsp:useBean id="services1Vehicule_55id" scope="session" class="services.Vehicule" />
-        <%
-        services1Vehicule_55id.setKilometrage(kilometrage_56idTemp);
-        services1Vehicule_55id.setEstLoue(estLoue_57idTemp);
-        services1Vehicule_55id.setAnneeVehicule(anneeVehicule_58idTemp);
-        services1Vehicule_55id.setModele(modele_59idTemp);
-        services1Vehicule_55id.setImmatriculation(immatriculation_60idTemp);
-        services1Vehicule_55id.setCouleur(couleur_61idTemp);
-        services1Vehicule_55id.setMarque(marque_62idTemp);
-        services1Vehicule_55id.setPrix(prix_63idTemp);
-        services1Vehicule_55id.setMoteur(moteur_64idTemp);
-        services1Vehicule_55id.setEnVente(enVente_65idTemp);
-        services1Vehicule_55id.setOptions(options_66idTemp);
-        sampleGestionGarageServiceProxyid.locationVehicule(services1Vehicule_55id);
-break;
-case 179:
-        gotMethod = true;
-        String immatriculation_67id=  request.getParameter("immatriculation204");
-            java.lang.String immatriculation_67idTemp = null;
-        if(!immatriculation_67id.equals("")){
-         immatriculation_67idTemp  = immatriculation_67id;
-        }
-        services.Vehicule getVehicule179mtemp = sampleGestionGarageServiceProxyid.getVehicule(immatriculation_67idTemp);
-if(getVehicule179mtemp == null){
+        services.Employe[] getEmployes130mtemp = sampleGestionGarageServiceProxyid.getEmployes();
+if(getEmployes130mtemp == null){
 %>
-<%=getVehicule179mtemp %>
+<%=getEmployes130mtemp %>
+<%
+}else{
+        String tempreturnp131 = null;
+        if(getEmployes130mtemp != null){
+        java.util.List listreturnp131= java.util.Arrays.asList(getEmployes130mtemp);
+        tempreturnp131 = listreturnp131.toString();
+        }
+        %>
+        <%=tempreturnp131%>
+        <%
+}
+break;
+case 133:
+        gotMethod = true;
+        String kilometrage_48id=  request.getParameter("kilometrage138");
+        int kilometrage_48idTemp  = Integer.parseInt(kilometrage_48id);
+        String estLoue_49id=  request.getParameter("estLoue140");
+        boolean estLoue_49idTemp  = Boolean.valueOf(estLoue_49id).booleanValue();
+        String anneeVehicule_50id=  request.getParameter("anneeVehicule142");
+        int anneeVehicule_50idTemp  = Integer.parseInt(anneeVehicule_50id);
+        String modele_51id=  request.getParameter("modele144");
+            java.lang.String modele_51idTemp = null;
+        if(!modele_51id.equals("")){
+         modele_51idTemp  = modele_51id;
+        }
+        String immatriculation_52id=  request.getParameter("immatriculation146");
+            java.lang.String immatriculation_52idTemp = null;
+        if(!immatriculation_52id.equals("")){
+         immatriculation_52idTemp  = immatriculation_52id;
+        }
+        String marque_53id=  request.getParameter("marque148");
+            java.lang.String marque_53idTemp = null;
+        if(!marque_53id.equals("")){
+         marque_53idTemp  = marque_53id;
+        }
+        String couleur_54id=  request.getParameter("couleur150");
+            java.lang.String couleur_54idTemp = null;
+        if(!couleur_54id.equals("")){
+         couleur_54idTemp  = couleur_54id;
+        }
+        String moteur_55id=  request.getParameter("moteur152");
+            java.lang.String moteur_55idTemp = null;
+        if(!moteur_55id.equals("")){
+         moteur_55idTemp  = moteur_55id;
+        }
+        String prix_56id=  request.getParameter("prix154");
+        double prix_56idTemp  = Double.parseDouble(prix_56id);
+        String enVente_57id=  request.getParameter("enVente156");
+        boolean enVente_57idTemp  = Boolean.valueOf(enVente_57id).booleanValue();
+        String options_58id=  request.getParameter("options158");
+            java.lang.String options_58idTemp = null;
+        if(!options_58id.equals("")){
+         options_58idTemp  = options_58id;
+        }
+        %>
+        <jsp:useBean id="services1Vehicule_47id" scope="session" class="services.Vehicule" />
+        <%
+        services1Vehicule_47id.setKilometrage(kilometrage_48idTemp);
+        services1Vehicule_47id.setEstLoue(estLoue_49idTemp);
+        services1Vehicule_47id.setAnneeVehicule(anneeVehicule_50idTemp);
+        services1Vehicule_47id.setModele(modele_51idTemp);
+        services1Vehicule_47id.setImmatriculation(immatriculation_52idTemp);
+        services1Vehicule_47id.setMarque(marque_53idTemp);
+        services1Vehicule_47id.setCouleur(couleur_54idTemp);
+        services1Vehicule_47id.setMoteur(moteur_55idTemp);
+        services1Vehicule_47id.setPrix(prix_56idTemp);
+        services1Vehicule_47id.setEnVente(enVente_57idTemp);
+        services1Vehicule_47id.setOptions(options_58idTemp);
+        sampleGestionGarageServiceProxyid.achatVehicule(services1Vehicule_47id);
+break;
+case 160:
+        gotMethod = true;
+        String immatriculation_59id=  request.getParameter("immatriculation185");
+            java.lang.String immatriculation_59idTemp = null;
+        if(!immatriculation_59id.equals("")){
+         immatriculation_59idTemp  = immatriculation_59id;
+        }
+        services.Vehicule getVehicule160mtemp = sampleGestionGarageServiceProxyid.getVehicule(immatriculation_59idTemp);
+if(getVehicule160mtemp == null){
+%>
+<%=getVehicule160mtemp %>
 <%
 }else{
 %>
@@ -487,9 +441,9 @@ if(getVehicule179mtemp == null){
 <TD COLSPAN="2" ALIGN="LEFT">kilometrage:</TD>
 <TD>
 <%
-if(getVehicule179mtemp != null){
+if(getVehicule160mtemp != null){
 %>
-<%=getVehicule179mtemp.getKilometrage()
+<%=getVehicule160mtemp.getKilometrage()
 %><%}%>
 </TD>
 <TR>
@@ -497,9 +451,9 @@ if(getVehicule179mtemp != null){
 <TD COLSPAN="2" ALIGN="LEFT">estLoue:</TD>
 <TD>
 <%
-if(getVehicule179mtemp != null){
+if(getVehicule160mtemp != null){
 %>
-<%=getVehicule179mtemp.isEstLoue()
+<%=getVehicule160mtemp.isEstLoue()
 %><%}%>
 </TD>
 <TR>
@@ -507,9 +461,9 @@ if(getVehicule179mtemp != null){
 <TD COLSPAN="2" ALIGN="LEFT">anneeVehicule:</TD>
 <TD>
 <%
-if(getVehicule179mtemp != null){
+if(getVehicule160mtemp != null){
 %>
-<%=getVehicule179mtemp.getAnneeVehicule()
+<%=getVehicule160mtemp.getAnneeVehicule()
 %><%}%>
 </TD>
 <TR>
@@ -517,11 +471,11 @@ if(getVehicule179mtemp != null){
 <TD COLSPAN="2" ALIGN="LEFT">modele:</TD>
 <TD>
 <%
-if(getVehicule179mtemp != null){
-java.lang.String typemodele188 = getVehicule179mtemp.getModele();
-        String tempResultmodele188 = org.eclipse.jst.ws.util.JspUtils.markup(String.valueOf(typemodele188));
+if(getVehicule160mtemp != null){
+java.lang.String typemodele169 = getVehicule160mtemp.getModele();
+        String tempResultmodele169 = org.eclipse.jst.ws.util.JspUtils.markup(String.valueOf(typemodele169));
         %>
-        <%= tempResultmodele188 %>
+        <%= tempResultmodele169 %>
         <%
 }%>
 </TD>
@@ -530,24 +484,11 @@ java.lang.String typemodele188 = getVehicule179mtemp.getModele();
 <TD COLSPAN="2" ALIGN="LEFT">immatriculation:</TD>
 <TD>
 <%
-if(getVehicule179mtemp != null){
-java.lang.String typeimmatriculation190 = getVehicule179mtemp.getImmatriculation();
-        String tempResultimmatriculation190 = org.eclipse.jst.ws.util.JspUtils.markup(String.valueOf(typeimmatriculation190));
+if(getVehicule160mtemp != null){
+java.lang.String typeimmatriculation171 = getVehicule160mtemp.getImmatriculation();
+        String tempResultimmatriculation171 = org.eclipse.jst.ws.util.JspUtils.markup(String.valueOf(typeimmatriculation171));
         %>
-        <%= tempResultimmatriculation190 %>
-        <%
-}%>
-</TD>
-<TR>
-<TD WIDTH="5%"></TD>
-<TD COLSPAN="2" ALIGN="LEFT">couleur:</TD>
-<TD>
-<%
-if(getVehicule179mtemp != null){
-java.lang.String typecouleur192 = getVehicule179mtemp.getCouleur();
-        String tempResultcouleur192 = org.eclipse.jst.ws.util.JspUtils.markup(String.valueOf(typecouleur192));
-        %>
-        <%= tempResultcouleur192 %>
+        <%= tempResultimmatriculation171 %>
         <%
 }%>
 </TD>
@@ -556,11 +497,37 @@ java.lang.String typecouleur192 = getVehicule179mtemp.getCouleur();
 <TD COLSPAN="2" ALIGN="LEFT">marque:</TD>
 <TD>
 <%
-if(getVehicule179mtemp != null){
-java.lang.String typemarque194 = getVehicule179mtemp.getMarque();
-        String tempResultmarque194 = org.eclipse.jst.ws.util.JspUtils.markup(String.valueOf(typemarque194));
+if(getVehicule160mtemp != null){
+java.lang.String typemarque173 = getVehicule160mtemp.getMarque();
+        String tempResultmarque173 = org.eclipse.jst.ws.util.JspUtils.markup(String.valueOf(typemarque173));
         %>
-        <%= tempResultmarque194 %>
+        <%= tempResultmarque173 %>
+        <%
+}%>
+</TD>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">couleur:</TD>
+<TD>
+<%
+if(getVehicule160mtemp != null){
+java.lang.String typecouleur175 = getVehicule160mtemp.getCouleur();
+        String tempResultcouleur175 = org.eclipse.jst.ws.util.JspUtils.markup(String.valueOf(typecouleur175));
+        %>
+        <%= tempResultcouleur175 %>
+        <%
+}%>
+</TD>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">moteur:</TD>
+<TD>
+<%
+if(getVehicule160mtemp != null){
+java.lang.String typemoteur177 = getVehicule160mtemp.getMoteur();
+        String tempResultmoteur177 = org.eclipse.jst.ws.util.JspUtils.markup(String.valueOf(typemoteur177));
+        %>
+        <%= tempResultmoteur177 %>
         <%
 }%>
 </TD>
@@ -569,32 +536,19 @@ java.lang.String typemarque194 = getVehicule179mtemp.getMarque();
 <TD COLSPAN="2" ALIGN="LEFT">prix:</TD>
 <TD>
 <%
-if(getVehicule179mtemp != null){
+if(getVehicule160mtemp != null){
 %>
-<%=getVehicule179mtemp.getPrix()
+<%=getVehicule160mtemp.getPrix()
 %><%}%>
-</TD>
-<TR>
-<TD WIDTH="5%"></TD>
-<TD COLSPAN="2" ALIGN="LEFT">moteur:</TD>
-<TD>
-<%
-if(getVehicule179mtemp != null){
-java.lang.String typemoteur198 = getVehicule179mtemp.getMoteur();
-        String tempResultmoteur198 = org.eclipse.jst.ws.util.JspUtils.markup(String.valueOf(typemoteur198));
-        %>
-        <%= tempResultmoteur198 %>
-        <%
-}%>
 </TD>
 <TR>
 <TD WIDTH="5%"></TD>
 <TD COLSPAN="2" ALIGN="LEFT">enVente:</TD>
 <TD>
 <%
-if(getVehicule179mtemp != null){
+if(getVehicule160mtemp != null){
 %>
-<%=getVehicule179mtemp.isEnVente()
+<%=getVehicule160mtemp.isEnVente()
 %><%}%>
 </TD>
 <TR>
@@ -602,17 +556,63 @@ if(getVehicule179mtemp != null){
 <TD COLSPAN="2" ALIGN="LEFT">options:</TD>
 <TD>
 <%
-if(getVehicule179mtemp != null){
-java.lang.String typeoptions202 = getVehicule179mtemp.getOptions();
-        String tempResultoptions202 = org.eclipse.jst.ws.util.JspUtils.markup(String.valueOf(typeoptions202));
+if(getVehicule160mtemp != null){
+java.lang.String typeoptions183 = getVehicule160mtemp.getOptions();
+        String tempResultoptions183 = org.eclipse.jst.ws.util.JspUtils.markup(String.valueOf(typeoptions183));
         %>
-        <%= tempResultoptions202 %>
+        <%= tempResultoptions183 %>
         <%
 }%>
 </TD>
 </TABLE>
 <%
 }
+break;
+case 187:
+        gotMethod = true;
+        String mail_61id=  request.getParameter("mail192");
+            java.lang.String mail_61idTemp = null;
+        if(!mail_61id.equals("")){
+         mail_61idTemp  = mail_61id;
+        }
+        String telephone_62id=  request.getParameter("telephone194");
+            java.lang.String telephone_62idTemp = null;
+        if(!telephone_62id.equals("")){
+         telephone_62idTemp  = telephone_62id;
+        }
+        String nom_63id=  request.getParameter("nom196");
+            java.lang.String nom_63idTemp = null;
+        if(!nom_63id.equals("")){
+         nom_63idTemp  = nom_63id;
+        }
+        String fonction_64id=  request.getParameter("fonction198");
+            java.lang.String fonction_64idTemp = null;
+        if(!fonction_64id.equals("")){
+         fonction_64idTemp  = fonction_64id;
+        }
+        String matricule_65id=  request.getParameter("matricule200");
+        int matricule_65idTemp  = Integer.parseInt(matricule_65id);
+        String motDePasse_66id=  request.getParameter("motDePasse202");
+            java.lang.String motDePasse_66idTemp = null;
+        if(!motDePasse_66id.equals("")){
+         motDePasse_66idTemp  = motDePasse_66id;
+        }
+        String prenom_67id=  request.getParameter("prenom204");
+            java.lang.String prenom_67idTemp = null;
+        if(!prenom_67id.equals("")){
+         prenom_67idTemp  = prenom_67id;
+        }
+        %>
+        <jsp:useBean id="services1Employe_60id" scope="session" class="services.Employe" />
+        <%
+        services1Employe_60id.setMail(mail_61idTemp);
+        services1Employe_60id.setTelephone(telephone_62idTemp);
+        services1Employe_60id.setNom(nom_63idTemp);
+        services1Employe_60id.setFonction(fonction_64idTemp);
+        services1Employe_60id.setMatricule(matricule_65idTemp);
+        services1Employe_60id.setMotDePasse(motDePasse_66idTemp);
+        services1Employe_60id.setPrenom(prenom_67idTemp);
+        sampleGestionGarageServiceProxyid.ajouterEmploye(services1Employe_60id);
 break;
 }
 } catch (Exception e) { 
