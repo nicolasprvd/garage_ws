@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<employes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="employes.xsd">
+    <employe>
+        <matricule>1</matricule>
+        <nom>1</nom>
+        <prenom>1</prenom>
+        <fonction>1</fonction>
+        <telephone>1</telephone>
+        <mail>1</mail>
+        <motDePasse>1</motDePasse>
+    </employe>
+    <employe>
+        <matricule>2</matricule>
+        <nom>2</nom>
+        <prenom>2</prenom>
+        <fonction>2</fonction>
+        <telephone>2</telephone>
+        <mail>2</mail>
+        <motDePasse>2</motDePasse>
+    </employe>
+    <employe>
+        <matricule>3</matricule>
+        <nom>3</nom>
+        <prenom>3</prenom>
+        <fonction>3</fonction>
+        <telephone>3</telephone>
+        <mail>3</mail>
+        <motDePasse>3</motDePasse>
+    </employe>
+</employes>

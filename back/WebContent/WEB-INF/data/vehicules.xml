@@ -13,4 +13,56 @@
         <estLoue>false</estLoue>
         <enVente>false</enVente>
     </vehicule>
+    <vehicule>
+        <immatriculation>2</immatriculation>
+        <marque>2</marque>
+        <modele>2</modele>
+        <couleur>2</couleur>
+        <moteur>2</moteur>
+        <options>2</options>
+        <prix>2.0</prix>
+        <kilometrage>2</kilometrage>
+        <anneeVehicule>2</anneeVehicule>
+        <estLoue>false</estLoue>
+        <enVente>false</enVente>
+    </vehicule>
+    <vehicule>
+        <immatriculation>3</immatriculation>
+        <marque>3</marque>
+        <modele>3</modele>
+        <couleur>3</couleur>
+        <moteur>3</moteur>
+        <options>3</options>
+        <prix>3.0</prix>
+        <kilometrage>3</kilometrage>
+        <anneeVehicule>3</anneeVehicule>
+        <estLoue>false</estLoue>
+        <enVente>false</enVente>
+    </vehicule>
+    <vehicule>
+        <immatriculation>5</immatriculation>
+        <marque>1</marque>
+        <modele>1</modele>
+        <couleur>1</couleur>
+        <moteur>1</moteur>
+        <options>1</options>
+        <prix>1.0</prix>
+        <kilometrage>1</kilometrage>
+        <anneeVehicule>1</anneeVehicule>
+        <estLoue>true</estLoue>
+        <enVente>false</enVente>
+    </vehicule>
+    <vehicule>
+        <immatriculation>19</immatriculation>
+        <marque>peugeot</marque>
+        <modele>206</modele>
+        <couleur>rouge</couleur>
+        <moteur>diesel</moteur>
+        <options>all</options>
+        <prix>6000.0</prix>
+        <kilometrage>15000</kilometrage>
+        <anneeVehicule>2005</anneeVehicule>
+        <estLoue>false</estLoue>
+        <enVente>true</enVente>
+    </vehicule>
 </vehicules>

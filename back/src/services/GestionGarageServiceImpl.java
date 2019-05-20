@@ -61,6 +61,54 @@ public class GestionGarageServiceImpl implements GestionGarageService {
 		}
 		return vehiculesPrix;
 	}
+	
+	@Override
+	public List<Vehicule> getVehiculesParTrancheDePrix(double prixMin, double prixMax) {
+		List<Vehicule> vehiculesPrix = new ArrayList<>();
+		for(int i = 0; i < getVehicules().size(); i++) {
+			Vehicule v = getVehicules().get(i);
+			if(v.getPrix() >= prixMin && v.getPrix() <= prixMax) {
+				vehiculesPrix.add(v);
+			}
+		}
+		return vehiculesPrix;
+	}
+	
+	@Override
+	public List<Vehicule> getVehiculesParTrancheDeKM(int kmMin, int kmMax) {
+		List<Vehicule> vehiculesKm = new ArrayList<>();
+		for(int i = 0; i < getVehicules().size(); i++) {
+			Vehicule v = getVehicules().get(i);
+			if(v.getKilometrage() >= kmMin && v.getKilometrage() <= kmMax) {
+				vehiculesKm.add(v);
+			}
+		}
+		return vehiculesKm;
+	}
+	
+	@Override
+	public List<Vehicule> getVehiculesParDifferentsCriteres(String marque, String modele, String moteur, int kmMin, int kmMax, double prixMin, double prixMax) {
+		List<Vehicule> vehiculesCriteres = new ArrayList<>();
+		for(int i = 0; i < getVehicules().size(); i++) {
+			Vehicule v = getVehicules().get(i);	
+			
+			//Si aucun modele n'a été renseigner
+			if (modele == null) {
+				if(v.getMarque().equals(marque) && v.getMoteur().equals(moteur) && v.getKilometrage() >= kmMin && v.getKilometrage() <= kmMax && v.getPrix() >= prixMin && v.getPrix() <= prixMax) {
+					vehiculesCriteres.add(v);
+				}
+			}
+			//Sinon
+			else {
+				if(v.getMarque().equals(marque) && v.getModele().equals(modele) && v.getMoteur().equals(moteur) && v.getKilometrage() >= kmMin && v.getKilometrage() <= kmMax && v.getPrix() >= prixMin && v.getPrix() <= prixMax) {
+					vehiculesCriteres.add(v);
+				}
+			}	
+		}
+		return vehiculesCriteres;
+	}
+	
+	
 
 	@Override
 	public List<Vehicule> getVehiculesParType(VehiculeType type) {
@@ -81,12 +129,20 @@ public class GestionGarageServiceImpl implements GestionGarageService {
 	}
 
 	@Override
-	public void ajouterVehicule(Vehicule v) {
+	public void ajouterVehicule(Vehicule v) throws VehiculeException {
 		Vehicules vehicules = getVehiculesXML();
 		
 		//Fichier xml vide
 		if(vehicules == null) {
 			vehicules = new Vehicules();
+		}
+		//sinon , nous verifions qu'il n'y a pas deja un vehicule avec cette immatriculation (l'immatriculation est unique et identifie le vehicule)
+		else {
+			for (int i =  0 ; i < vehicules.getVehicules().size() ; i++) {
+				if (vehicules.getVehicules().get(i).getImmatriculation().equals(v.getImmatriculation())){
+					throw new VehiculeException(v);
+				}
+			}
 		}
 		vehicules.getVehicules().add(v);
 		setVehicules(vehicules);   
@@ -104,12 +160,20 @@ public class GestionGarageServiceImpl implements GestionGarageService {
 
 
 	@Override
-	public void ajouterEmploye(Employe e) {
+	public void ajouterEmploye(Employe e) throws EmployeException {
 		Employes employes = getEmployesXML();
 		
 		//Fichier xml vide
 		if(employes == null) {
 			employes = new Employes();
+		}
+		//sinon , nous verifions qu'il n'y a pas deja un vehicule avec cette immatriculation (l'immatriculation est unique et identifie le vehicule)
+		else {
+			for (int i =  0 ; i < employes.getEmployes().size() ; i++) {
+				if (employes.getEmployes().get(i).getMatricule() == (e.getMatricule())){
+					throw new EmployeException(e);
+				}
+			}
 		}
 		employes.getEmployes().add(e);
 		setEmployes(employes);   
@@ -128,19 +192,57 @@ public class GestionGarageServiceImpl implements GestionGarageService {
 
 	@Override
 	public void achatVehicule(Vehicule v) {
-		supprimerVehicule(v);
+		//On verifie 
+		if (v.isEnVente() == true) {
+			supprimerVehicule(v);
+		}
+		else {
+			System.out.println("Ce vehicule est destiné à la location");
+		}
+		
 		
 	}
 
 	@Override
 	public void locationVehicule(Vehicule v) {
-		v.setEstLoue(true);
-		//Pas sur
+
+			if (v.isEnVente() == true) {
+				System.out.println("Ce vehicule est destiné à la vente");
+			}
+			else {
+				if (v.isEstLoue() == true) {
+					System.out.println("Ce vehicule est actuellement en location, si vous voulez celui-ci il faudra attendre son retour");
+				}
+				else {
+					v.setEstLoue(true);
+					Vehicules vehicules = getVehiculesXML();
+					for (int i =  0 ; i < vehicules.getVehicules().size() ; i++) {
+						if (vehicules.getVehicules().get(i).getImmatriculation().equals(v.getImmatriculation())){
+							vehicules.getVehicules().set(i, v);
+							setVehicules(vehicules);
+						}
+					}
+					
+				}
+			}
+	}
+	
+	@Override
+	public void retourLocationVehicule(Vehicule v) {
+			v.setEstLoue(false);
+			Vehicules vehicules = getVehiculesXML();
+			for (int i =  0 ; i < vehicules.getVehicules().size() ; i++) {
+				if (vehicules.getVehicules().get(i).getImmatriculation().equals(v.getImmatriculation())){
+					vehicules.getVehicules().set(i, v);
+					setVehicules(vehicules);
+				}
+			}
+
 	}
 
 	@Override
 	public List<Employe> getEmployes() {
-		return this.employes;
+		return getEmployesXML().getEmployes();
 	}
 	
 	private Vehicules getVehiculesXML() {
@@ -169,7 +271,7 @@ public class GestionGarageServiceImpl implements GestionGarageService {
 	
 	private void setEmployes(Employes employes) {
 		try {
-            JAXBParse.marshal(employes, "D:/MIAGE/S8/WebServices/GarageWSBack/WebContent/WEB-INF/data/vehicules.xml", new File("D:/MIAGE/S8/WebServices/GarageWSBack/WebContent/WEB-INF/data/employes.xml"));
+            JAXBParse.marshal(employes, "D:/MIAGE/S8/WebServices/GarageWSBack/WebContent/WEB-INF/data/employes.xml", new File("D:/MIAGE/S8/WebServices/GarageWSBack/WebContent/WEB-INF/data/employes.xml"));
         } catch (JAXBException e) {
             e.printStackTrace();
         }

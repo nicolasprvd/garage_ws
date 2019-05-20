@@ -1,8 +1,10 @@
 eclipse.preferences.version=1
 encoding//src/services/Employe.java=UTF-8
+encoding//src/services/EmployeException.java=UTF-8
 encoding//src/services/GestionGarageService.java=UTF-8
 encoding//src/services/GestionGarageServiceImplPortBindingStub.java=UTF-8
 encoding//src/services/GestionGarageServiceImplService.java=UTF-8
 encoding//src/services/GestionGarageServiceImplServiceLocator.java=UTF-8
 encoding//src/services/Vehicule.java=UTF-8
+encoding//src/services/VehiculeException.java=UTF-8
 encoding//src/services/VehiculeType.java=UTF-8

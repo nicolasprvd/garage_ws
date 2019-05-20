@@ -5,7 +5,7 @@
 
   <xs:complexType name="employes">
     <xs:sequence>
-      <xs:element name="employes" type="employe" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="employe" type="employe" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
 

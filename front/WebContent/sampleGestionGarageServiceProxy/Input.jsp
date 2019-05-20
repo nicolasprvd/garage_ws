@@ -59,76 +59,76 @@ valid = false;
 %>
 <FORM METHOD="POST" ACTION="Result.jsp" TARGET="result">
 <INPUT TYPE="HIDDEN" NAME="method" VALUE="<%=org.eclipse.jst.ws.util.JspUtils.markup(method)%>">
-<TABLE>
-<TR>
-<TD COLSPAN="3" ALIGN="LEFT">vehicule:</TD>
-<TR>
-<TD WIDTH="5%"></TD>
-<TD COLSPAN="2" ALIGN="LEFT">kilometrage:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="kilometrage22" SIZE=20></TD>
-</TR>
-<TR>
-<TD WIDTH="5%"></TD>
-<TD COLSPAN="2" ALIGN="LEFT">estLoue:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="estLoue24" SIZE=20></TD>
-</TR>
-<TR>
-<TD WIDTH="5%"></TD>
-<TD COLSPAN="2" ALIGN="LEFT">anneeVehicule:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="anneeVehicule26" SIZE=20></TD>
-</TR>
-<TR>
-<TD WIDTH="5%"></TD>
-<TD COLSPAN="2" ALIGN="LEFT">modele:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="modele28" SIZE=20></TD>
-</TR>
-<TR>
-<TD WIDTH="5%"></TD>
-<TD COLSPAN="2" ALIGN="LEFT">immatriculation:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="immatriculation30" SIZE=20></TD>
-</TR>
-<TR>
-<TD WIDTH="5%"></TD>
-<TD COLSPAN="2" ALIGN="LEFT">marque:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="marque32" SIZE=20></TD>
-</TR>
-<TR>
-<TD WIDTH="5%"></TD>
-<TD COLSPAN="2" ALIGN="LEFT">couleur:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="couleur34" SIZE=20></TD>
-</TR>
-<TR>
-<TD WIDTH="5%"></TD>
-<TD COLSPAN="2" ALIGN="LEFT">moteur:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="moteur36" SIZE=20></TD>
-</TR>
-<TR>
-<TD WIDTH="5%"></TD>
-<TD COLSPAN="2" ALIGN="LEFT">prix:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="prix38" SIZE=20></TD>
-</TR>
-<TR>
-<TD WIDTH="5%"></TD>
-<TD COLSPAN="2" ALIGN="LEFT">enVente:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="enVente40" SIZE=20></TD>
-</TR>
-<TR>
-<TD WIDTH="5%"></TD>
-<TD COLSPAN="2" ALIGN="LEFT">options:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="options42" SIZE=20></TD>
-</TR>
-</TABLE>
 <BR>
 <INPUT TYPE="SUBMIT" VALUE="Invoke">
 <INPUT TYPE="RESET" VALUE="Clear">
 </FORM>
 <%
 break;
-case 44:
+case 20:
 valid = false;
 %>
 <FORM METHOD="POST" ACTION="Result.jsp" TARGET="result">
 <INPUT TYPE="HIDDEN" NAME="method" VALUE="<%=org.eclipse.jst.ws.util.JspUtils.markup(method)%>">
+<TABLE>
+<TR>
+<TD COLSPAN="3" ALIGN="LEFT">vehicule:</TD>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">kilometrage:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="kilometrage25" SIZE=20></TD>
+</TR>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">estLoue:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="estLoue27" SIZE=20></TD>
+</TR>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">anneeVehicule:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="anneeVehicule29" SIZE=20></TD>
+</TR>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">modele:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="modele31" SIZE=20></TD>
+</TR>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">immatriculation:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="immatriculation33" SIZE=20></TD>
+</TR>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">marque:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="marque35" SIZE=20></TD>
+</TR>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">couleur:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="couleur37" SIZE=20></TD>
+</TR>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">moteur:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="moteur39" SIZE=20></TD>
+</TR>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">prix:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="prix41" SIZE=20></TD>
+</TR>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">enVente:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="enVente43" SIZE=20></TD>
+</TR>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">options:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="options45" SIZE=20></TD>
+</TR>
+</TABLE>
 <BR>
 <INPUT TYPE="SUBMIT" VALUE="Invoke">
 <INPUT TYPE="RESET" VALUE="Clear">
@@ -142,8 +142,61 @@ valid = false;
 <INPUT TYPE="HIDDEN" NAME="method" VALUE="<%=org.eclipse.jst.ws.util.JspUtils.markup(method)%>">
 <TABLE>
 <TR>
-<TD COLSPAN="1" ALIGN="LEFT">prix:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="prix50" SIZE=20></TD>
+<TD COLSPAN="3" ALIGN="LEFT">vehicule:</TD>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">kilometrage:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="kilometrage52" SIZE=20></TD>
+</TR>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">estLoue:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="estLoue54" SIZE=20></TD>
+</TR>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">anneeVehicule:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="anneeVehicule56" SIZE=20></TD>
+</TR>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">modele:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="modele58" SIZE=20></TD>
+</TR>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">immatriculation:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="immatriculation60" SIZE=20></TD>
+</TR>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">marque:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="marque62" SIZE=20></TD>
+</TR>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">couleur:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="couleur64" SIZE=20></TD>
+</TR>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">moteur:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="moteur66" SIZE=20></TD>
+</TR>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">prix:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="prix68" SIZE=20></TD>
+</TR>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">enVente:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="enVente70" SIZE=20></TD>
+</TR>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">options:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="options72" SIZE=20></TD>
 </TR>
 </TABLE>
 <BR>
@@ -152,7 +205,7 @@ valid = false;
 </FORM>
 <%
 break;
-case 52:
+case 74:
 valid = false;
 %>
 <FORM METHOD="POST" ACTION="Result.jsp" TARGET="result">
@@ -160,7 +213,7 @@ valid = false;
 <TABLE>
 <TR>
 <TD COLSPAN="1" ALIGN="LEFT">marque:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="marque55" SIZE=20></TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="marque77" SIZE=20></TD>
 </TR>
 </TABLE>
 <BR>
@@ -169,68 +222,15 @@ valid = false;
 </FORM>
 <%
 break;
-case 57:
+case 79:
 valid = false;
 %>
 <FORM METHOD="POST" ACTION="Result.jsp" TARGET="result">
 <INPUT TYPE="HIDDEN" NAME="method" VALUE="<%=org.eclipse.jst.ws.util.JspUtils.markup(method)%>">
 <TABLE>
 <TR>
-<TD COLSPAN="3" ALIGN="LEFT">vehicule:</TD>
-<TR>
-<TD WIDTH="5%"></TD>
-<TD COLSPAN="2" ALIGN="LEFT">kilometrage:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="kilometrage62" SIZE=20></TD>
-</TR>
-<TR>
-<TD WIDTH="5%"></TD>
-<TD COLSPAN="2" ALIGN="LEFT">estLoue:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="estLoue64" SIZE=20></TD>
-</TR>
-<TR>
-<TD WIDTH="5%"></TD>
-<TD COLSPAN="2" ALIGN="LEFT">anneeVehicule:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="anneeVehicule66" SIZE=20></TD>
-</TR>
-<TR>
-<TD WIDTH="5%"></TD>
-<TD COLSPAN="2" ALIGN="LEFT">modele:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="modele68" SIZE=20></TD>
-</TR>
-<TR>
-<TD WIDTH="5%"></TD>
-<TD COLSPAN="2" ALIGN="LEFT">immatriculation:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="immatriculation70" SIZE=20></TD>
-</TR>
-<TR>
-<TD WIDTH="5%"></TD>
-<TD COLSPAN="2" ALIGN="LEFT">marque:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="marque72" SIZE=20></TD>
-</TR>
-<TR>
-<TD WIDTH="5%"></TD>
-<TD COLSPAN="2" ALIGN="LEFT">couleur:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="couleur74" SIZE=20></TD>
-</TR>
-<TR>
-<TD WIDTH="5%"></TD>
-<TD COLSPAN="2" ALIGN="LEFT">moteur:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="moteur76" SIZE=20></TD>
-</TR>
-<TR>
-<TD WIDTH="5%"></TD>
-<TD COLSPAN="2" ALIGN="LEFT">prix:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="prix78" SIZE=20></TD>
-</TR>
-<TR>
-<TD WIDTH="5%"></TD>
-<TD COLSPAN="2" ALIGN="LEFT">enVente:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="enVente80" SIZE=20></TD>
-</TR>
-<TR>
-<TD WIDTH="5%"></TD>
-<TD COLSPAN="2" ALIGN="LEFT">options:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="options82" SIZE=20></TD>
+<TD COLSPAN="1" ALIGN="LEFT">prix:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="prix82" SIZE=20></TD>
 </TR>
 </TABLE>
 <BR>
@@ -246,111 +246,61 @@ valid = false;
 <INPUT TYPE="HIDDEN" NAME="method" VALUE="<%=org.eclipse.jst.ws.util.JspUtils.markup(method)%>">
 <TABLE>
 <TR>
-<TD COLSPAN="3" ALIGN="LEFT">employe:</TD>
-<TR>
-<TD WIDTH="5%"></TD>
-<TD COLSPAN="2" ALIGN="LEFT">mail:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="mail89" SIZE=20></TD>
-</TR>
-<TR>
-<TD WIDTH="5%"></TD>
-<TD COLSPAN="2" ALIGN="LEFT">telephone:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="telephone91" SIZE=20></TD>
-</TR>
-<TR>
-<TD WIDTH="5%"></TD>
-<TD COLSPAN="2" ALIGN="LEFT">nom:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="nom93" SIZE=20></TD>
-</TR>
-<TR>
-<TD WIDTH="5%"></TD>
-<TD COLSPAN="2" ALIGN="LEFT">fonction:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="fonction95" SIZE=20></TD>
-</TR>
-<TR>
-<TD WIDTH="5%"></TD>
-<TD COLSPAN="2" ALIGN="LEFT">matricule:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="matricule97" SIZE=20></TD>
-</TR>
-<TR>
-<TD WIDTH="5%"></TD>
-<TD COLSPAN="2" ALIGN="LEFT">motDePasse:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="motDePasse99" SIZE=20></TD>
-</TR>
-<TR>
-<TD WIDTH="5%"></TD>
-<TD COLSPAN="2" ALIGN="LEFT">prenom:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="prenom101" SIZE=20></TD>
-</TR>
-</TABLE>
-<BR>
-<INPUT TYPE="SUBMIT" VALUE="Invoke">
-<INPUT TYPE="RESET" VALUE="Clear">
-</FORM>
-<%
-break;
-case 103:
-valid = false;
-%>
-<FORM METHOD="POST" ACTION="Result.jsp" TARGET="result">
-<INPUT TYPE="HIDDEN" NAME="method" VALUE="<%=org.eclipse.jst.ws.util.JspUtils.markup(method)%>">
-<TABLE>
-<TR>
-<TD COLSPAN="3" ALIGN="LEFT">arg0:</TD>
+<TD COLSPAN="3" ALIGN="LEFT">vehicule:</TD>
 <TR>
 <TD WIDTH="5%"></TD>
 <TD COLSPAN="2" ALIGN="LEFT">kilometrage:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="kilometrage108" SIZE=20></TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="kilometrage89" SIZE=20></TD>
 </TR>
 <TR>
 <TD WIDTH="5%"></TD>
 <TD COLSPAN="2" ALIGN="LEFT">estLoue:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="estLoue110" SIZE=20></TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="estLoue91" SIZE=20></TD>
 </TR>
 <TR>
 <TD WIDTH="5%"></TD>
 <TD COLSPAN="2" ALIGN="LEFT">anneeVehicule:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="anneeVehicule112" SIZE=20></TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="anneeVehicule93" SIZE=20></TD>
 </TR>
 <TR>
 <TD WIDTH="5%"></TD>
 <TD COLSPAN="2" ALIGN="LEFT">modele:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="modele114" SIZE=20></TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="modele95" SIZE=20></TD>
 </TR>
 <TR>
 <TD WIDTH="5%"></TD>
 <TD COLSPAN="2" ALIGN="LEFT">immatriculation:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="immatriculation116" SIZE=20></TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="immatriculation97" SIZE=20></TD>
 </TR>
 <TR>
 <TD WIDTH="5%"></TD>
 <TD COLSPAN="2" ALIGN="LEFT">marque:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="marque118" SIZE=20></TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="marque99" SIZE=20></TD>
 </TR>
 <TR>
 <TD WIDTH="5%"></TD>
 <TD COLSPAN="2" ALIGN="LEFT">couleur:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="couleur120" SIZE=20></TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="couleur101" SIZE=20></TD>
 </TR>
 <TR>
 <TD WIDTH="5%"></TD>
 <TD COLSPAN="2" ALIGN="LEFT">moteur:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="moteur122" SIZE=20></TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="moteur103" SIZE=20></TD>
 </TR>
 <TR>
 <TD WIDTH="5%"></TD>
 <TD COLSPAN="2" ALIGN="LEFT">prix:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="prix124" SIZE=20></TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="prix105" SIZE=20></TD>
 </TR>
 <TR>
 <TD WIDTH="5%"></TD>
 <TD COLSPAN="2" ALIGN="LEFT">enVente:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="enVente126" SIZE=20></TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="enVente107" SIZE=20></TD>
 </TR>
 <TR>
 <TD WIDTH="5%"></TD>
 <TD COLSPAN="2" ALIGN="LEFT">options:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="options128" SIZE=20></TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="options109" SIZE=20></TD>
 </TR>
 </TABLE>
 <BR>
@@ -359,88 +309,7 @@ valid = false;
 </FORM>
 <%
 break;
-case 130:
-valid = false;
-%>
-<FORM METHOD="POST" ACTION="Result.jsp" TARGET="result">
-<INPUT TYPE="HIDDEN" NAME="method" VALUE="<%=org.eclipse.jst.ws.util.JspUtils.markup(method)%>">
-<BR>
-<INPUT TYPE="SUBMIT" VALUE="Invoke">
-<INPUT TYPE="RESET" VALUE="Clear">
-</FORM>
-<%
-break;
-case 133:
-valid = false;
-%>
-<FORM METHOD="POST" ACTION="Result.jsp" TARGET="result">
-<INPUT TYPE="HIDDEN" NAME="method" VALUE="<%=org.eclipse.jst.ws.util.JspUtils.markup(method)%>">
-<TABLE>
-<TR>
-<TD COLSPAN="3" ALIGN="LEFT">arg0:</TD>
-<TR>
-<TD WIDTH="5%"></TD>
-<TD COLSPAN="2" ALIGN="LEFT">kilometrage:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="kilometrage138" SIZE=20></TD>
-</TR>
-<TR>
-<TD WIDTH="5%"></TD>
-<TD COLSPAN="2" ALIGN="LEFT">estLoue:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="estLoue140" SIZE=20></TD>
-</TR>
-<TR>
-<TD WIDTH="5%"></TD>
-<TD COLSPAN="2" ALIGN="LEFT">anneeVehicule:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="anneeVehicule142" SIZE=20></TD>
-</TR>
-<TR>
-<TD WIDTH="5%"></TD>
-<TD COLSPAN="2" ALIGN="LEFT">modele:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="modele144" SIZE=20></TD>
-</TR>
-<TR>
-<TD WIDTH="5%"></TD>
-<TD COLSPAN="2" ALIGN="LEFT">immatriculation:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="immatriculation146" SIZE=20></TD>
-</TR>
-<TR>
-<TD WIDTH="5%"></TD>
-<TD COLSPAN="2" ALIGN="LEFT">marque:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="marque148" SIZE=20></TD>
-</TR>
-<TR>
-<TD WIDTH="5%"></TD>
-<TD COLSPAN="2" ALIGN="LEFT">couleur:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="couleur150" SIZE=20></TD>
-</TR>
-<TR>
-<TD WIDTH="5%"></TD>
-<TD COLSPAN="2" ALIGN="LEFT">moteur:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="moteur152" SIZE=20></TD>
-</TR>
-<TR>
-<TD WIDTH="5%"></TD>
-<TD COLSPAN="2" ALIGN="LEFT">prix:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="prix154" SIZE=20></TD>
-</TR>
-<TR>
-<TD WIDTH="5%"></TD>
-<TD COLSPAN="2" ALIGN="LEFT">enVente:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="enVente156" SIZE=20></TD>
-</TR>
-<TR>
-<TD WIDTH="5%"></TD>
-<TD COLSPAN="2" ALIGN="LEFT">options:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="options158" SIZE=20></TD>
-</TR>
-</TABLE>
-<BR>
-<INPUT TYPE="SUBMIT" VALUE="Invoke">
-<INPUT TYPE="RESET" VALUE="Clear">
-</FORM>
-<%
-break;
-case 160:
+case 111:
 valid = false;
 %>
 <FORM METHOD="POST" ACTION="Result.jsp" TARGET="result">
@@ -448,7 +317,7 @@ valid = false;
 <TABLE>
 <TR>
 <TD COLSPAN="1" ALIGN="LEFT">immatriculation:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="immatriculation185" SIZE=20></TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="immatriculation136" SIZE=20></TD>
 </TR>
 </TABLE>
 <BR>
@@ -457,7 +326,7 @@ valid = false;
 </FORM>
 <%
 break;
-case 187:
+case 138:
 valid = false;
 %>
 <FORM METHOD="POST" ACTION="Result.jsp" TARGET="result">
@@ -468,37 +337,337 @@ valid = false;
 <TR>
 <TD WIDTH="5%"></TD>
 <TD COLSPAN="2" ALIGN="LEFT">mail:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="mail192" SIZE=20></TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="mail143" SIZE=20></TD>
 </TR>
 <TR>
 <TD WIDTH="5%"></TD>
 <TD COLSPAN="2" ALIGN="LEFT">telephone:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="telephone194" SIZE=20></TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="telephone145" SIZE=20></TD>
 </TR>
 <TR>
 <TD WIDTH="5%"></TD>
 <TD COLSPAN="2" ALIGN="LEFT">nom:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="nom196" SIZE=20></TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="nom147" SIZE=20></TD>
 </TR>
 <TR>
 <TD WIDTH="5%"></TD>
 <TD COLSPAN="2" ALIGN="LEFT">fonction:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="fonction198" SIZE=20></TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="fonction149" SIZE=20></TD>
 </TR>
 <TR>
 <TD WIDTH="5%"></TD>
 <TD COLSPAN="2" ALIGN="LEFT">matricule:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="matricule200" SIZE=20></TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="matricule151" SIZE=20></TD>
 </TR>
 <TR>
 <TD WIDTH="5%"></TD>
 <TD COLSPAN="2" ALIGN="LEFT">motDePasse:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="motDePasse202" SIZE=20></TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="motDePasse153" SIZE=20></TD>
 </TR>
 <TR>
 <TD WIDTH="5%"></TD>
 <TD COLSPAN="2" ALIGN="LEFT">prenom:</TD>
-<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="prenom204" SIZE=20></TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="prenom155" SIZE=20></TD>
+</TR>
+</TABLE>
+<BR>
+<INPUT TYPE="SUBMIT" VALUE="Invoke">
+<INPUT TYPE="RESET" VALUE="Clear">
+</FORM>
+<%
+break;
+case 157:
+valid = false;
+%>
+<FORM METHOD="POST" ACTION="Result.jsp" TARGET="result">
+<INPUT TYPE="HIDDEN" NAME="method" VALUE="<%=org.eclipse.jst.ws.util.JspUtils.markup(method)%>">
+<TABLE>
+<TR>
+<TD COLSPAN="3" ALIGN="LEFT">employe:</TD>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">mail:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="mail162" SIZE=20></TD>
+</TR>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">telephone:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="telephone164" SIZE=20></TD>
+</TR>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">nom:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="nom166" SIZE=20></TD>
+</TR>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">fonction:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="fonction168" SIZE=20></TD>
+</TR>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">matricule:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="matricule170" SIZE=20></TD>
+</TR>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">motDePasse:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="motDePasse172" SIZE=20></TD>
+</TR>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">prenom:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="prenom174" SIZE=20></TD>
+</TR>
+</TABLE>
+<BR>
+<INPUT TYPE="SUBMIT" VALUE="Invoke">
+<INPUT TYPE="RESET" VALUE="Clear">
+</FORM>
+<%
+break;
+case 176:
+valid = false;
+%>
+<FORM METHOD="POST" ACTION="Result.jsp" TARGET="result">
+<INPUT TYPE="HIDDEN" NAME="method" VALUE="<%=org.eclipse.jst.ws.util.JspUtils.markup(method)%>">
+<TABLE>
+<TR>
+<TD COLSPAN="3" ALIGN="LEFT">vehicule:</TD>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">kilometrage:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="kilometrage181" SIZE=20></TD>
+</TR>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">estLoue:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="estLoue183" SIZE=20></TD>
+</TR>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">anneeVehicule:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="anneeVehicule185" SIZE=20></TD>
+</TR>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">modele:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="modele187" SIZE=20></TD>
+</TR>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">immatriculation:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="immatriculation189" SIZE=20></TD>
+</TR>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">marque:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="marque191" SIZE=20></TD>
+</TR>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">couleur:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="couleur193" SIZE=20></TD>
+</TR>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">moteur:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="moteur195" SIZE=20></TD>
+</TR>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">prix:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="prix197" SIZE=20></TD>
+</TR>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">enVente:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="enVente199" SIZE=20></TD>
+</TR>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">options:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="options201" SIZE=20></TD>
+</TR>
+</TABLE>
+<BR>
+<INPUT TYPE="SUBMIT" VALUE="Invoke">
+<INPUT TYPE="RESET" VALUE="Clear">
+</FORM>
+<%
+break;
+case 203:
+valid = false;
+%>
+<FORM METHOD="POST" ACTION="Result.jsp" TARGET="result">
+<INPUT TYPE="HIDDEN" NAME="method" VALUE="<%=org.eclipse.jst.ws.util.JspUtils.markup(method)%>">
+<TABLE>
+<TR>
+<TD COLSPAN="3" ALIGN="LEFT">vehicule:</TD>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">kilometrage:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="kilometrage208" SIZE=20></TD>
+</TR>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">estLoue:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="estLoue210" SIZE=20></TD>
+</TR>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">anneeVehicule:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="anneeVehicule212" SIZE=20></TD>
+</TR>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">modele:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="modele214" SIZE=20></TD>
+</TR>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">immatriculation:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="immatriculation216" SIZE=20></TD>
+</TR>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">marque:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="marque218" SIZE=20></TD>
+</TR>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">couleur:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="couleur220" SIZE=20></TD>
+</TR>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">moteur:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="moteur222" SIZE=20></TD>
+</TR>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">prix:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="prix224" SIZE=20></TD>
+</TR>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">enVente:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="enVente226" SIZE=20></TD>
+</TR>
+<TR>
+<TD WIDTH="5%"></TD>
+<TD COLSPAN="2" ALIGN="LEFT">options:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="options228" SIZE=20></TD>
+</TR>
+</TABLE>
+<BR>
+<INPUT TYPE="SUBMIT" VALUE="Invoke">
+<INPUT TYPE="RESET" VALUE="Clear">
+</FORM>
+<%
+break;
+case 230:
+valid = false;
+%>
+<FORM METHOD="POST" ACTION="Result.jsp" TARGET="result">
+<INPUT TYPE="HIDDEN" NAME="method" VALUE="<%=org.eclipse.jst.ws.util.JspUtils.markup(method)%>">
+<BR>
+<INPUT TYPE="SUBMIT" VALUE="Invoke">
+<INPUT TYPE="RESET" VALUE="Clear">
+</FORM>
+<%
+break;
+case 233:
+valid = false;
+%>
+<FORM METHOD="POST" ACTION="Result.jsp" TARGET="result">
+<INPUT TYPE="HIDDEN" NAME="method" VALUE="<%=org.eclipse.jst.ws.util.JspUtils.markup(method)%>">
+<TABLE>
+<TR>
+<TD COLSPAN="1" ALIGN="LEFT">kmMin:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="kmMin236" SIZE=20></TD>
+</TR>
+</TABLE>
+<TABLE>
+<TR>
+<TD COLSPAN="1" ALIGN="LEFT">kmMax:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="kmMax238" SIZE=20></TD>
+</TR>
+</TABLE>
+<BR>
+<INPUT TYPE="SUBMIT" VALUE="Invoke">
+<INPUT TYPE="RESET" VALUE="Clear">
+</FORM>
+<%
+break;
+case 240:
+valid = false;
+%>
+<FORM METHOD="POST" ACTION="Result.jsp" TARGET="result">
+<INPUT TYPE="HIDDEN" NAME="method" VALUE="<%=org.eclipse.jst.ws.util.JspUtils.markup(method)%>">
+<TABLE>
+<TR>
+<TD COLSPAN="1" ALIGN="LEFT">prixMin:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="prixMin243" SIZE=20></TD>
+</TR>
+</TABLE>
+<TABLE>
+<TR>
+<TD COLSPAN="1" ALIGN="LEFT">prixMax:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="prixMax245" SIZE=20></TD>
+</TR>
+</TABLE>
+<BR>
+<INPUT TYPE="SUBMIT" VALUE="Invoke">
+<INPUT TYPE="RESET" VALUE="Clear">
+</FORM>
+<%
+break;
+case 247:
+valid = false;
+%>
+<FORM METHOD="POST" ACTION="Result.jsp" TARGET="result">
+<INPUT TYPE="HIDDEN" NAME="method" VALUE="<%=org.eclipse.jst.ws.util.JspUtils.markup(method)%>">
+<TABLE>
+<TR>
+<TD COLSPAN="1" ALIGN="LEFT">marque:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="marque250" SIZE=20></TD>
+</TR>
+</TABLE>
+<TABLE>
+<TR>
+<TD COLSPAN="1" ALIGN="LEFT">modele:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="modele252" SIZE=20></TD>
+</TR>
+</TABLE>
+<TABLE>
+<TR>
+<TD COLSPAN="1" ALIGN="LEFT">moteur:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="moteur254" SIZE=20></TD>
+</TR>
+</TABLE>
+<TABLE>
+<TR>
+<TD COLSPAN="1" ALIGN="LEFT">kmMin:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="kmMin256" SIZE=20></TD>
+</TR>
+</TABLE>
+<TABLE>
+<TR>
+<TD COLSPAN="1" ALIGN="LEFT">kmMax:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="kmMax258" SIZE=20></TD>
+</TR>
+</TABLE>
+<TABLE>
+<TR>
+<TD COLSPAN="1" ALIGN="LEFT">prixMin:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="prixMin260" SIZE=20></TD>
+</TR>
+</TABLE>
+<TABLE>
+<TR>
+<TD COLSPAN="1" ALIGN="LEFT">prixMax:</TD>
+<TD ALIGN="left"><INPUT TYPE="TEXT" NAME="prixMax262" SIZE=20></TD>
 </TR>
 </TABLE>
 <BR>

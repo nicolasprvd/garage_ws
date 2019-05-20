@@ -19,9 +19,10 @@ public interface GestionGarageService {
 	/**
 	 * Méthode d'ajout d'un véhicule
 	 * @param v
+	 * @throws VehiculeException 
 	 */
 	@WebMethod(operationName = "ajouterVehicule")
-	void ajouterVehicule(@WebParam(name="vehicule") Vehicule v);
+	void ajouterVehicule(@WebParam(name="vehicule") Vehicule v) throws VehiculeException;
 	
 	//Modifier un vehicule
 	
@@ -75,9 +76,10 @@ public interface GestionGarageService {
 	/**
 	 * Méthode d'ajout d'un employe
 	 * @param e
+	 * @throws EmployeException 
 	 */
 	@WebMethod(operationName = "ajouterEmploye")
-	void ajouterEmploye(Employe e);
+	void ajouterEmploye(Employe e) throws EmployeException;
 	
 	//Inscrire un employe
 	//Authentifier un employé
@@ -103,7 +105,7 @@ public interface GestionGarageService {
 	 * @param v
 	 */
 	@WebMethod(operationName = "achatVehicule")
-	void achatVehicule(Vehicule v);
+	void achatVehicule(@WebParam(name="Vehicule") Vehicule v);
 	
 	
 	/**
@@ -111,7 +113,44 @@ public interface GestionGarageService {
 	 * @param v
 	 */
 	@WebMethod(operationName = "locationVehicule")
-	void locationVehicule(Vehicule v);
+	void locationVehicule(@WebParam(name="Vehicule") Vehicule v);
+
+	/**
+	 * Méthode de retour delocation d'un véhicule
+	 * @param v
+	 */
+	@WebMethod(operationName = "retourLocationVehicule")
+	void retourLocationVehicule(@WebParam(name="Vehicule") Vehicule v);
+
+	/**
+	 * Méthode de retour les vehicules par tranche de prix
+	 * @param prixMin
+	 * @param prixMax
+	 */
+	@WebMethod(operationName = "getVehiculesParTrancheDePrix")
+	List<Vehicule> getVehiculesParTrancheDePrix(@WebParam(name="PrixMin") double prixMin, @WebParam(name="prixMax") double prixMax);
+
+	/**
+	 * Méthode de retour les vehicules par tranche de kilometre
+	 * @param kmMin
+	 * @param kmMax
+	 */
+	@WebMethod(operationName = "getVehiculesParTrancheDeKM")
+	List<Vehicule> getVehiculesParTrancheDeKM(@WebParam(name="kmMin") int kmMin, @WebParam(name="kmMax") int kmMax);
+
+	/**
+	 * Méthode de retour les vehicules par recherche de plusieurs critères important
+	 * @param marque
+	 * @param modele
+	 * @param moteur
+	 * @param kmMin
+	 * @param kmMax
+	 * @param prixMin
+	 * @param prixMax
+	 */
+	@WebMethod(operationName = "getVehiculesParDifferentsCriteres")
+	List<Vehicule> getVehiculesParDifferentsCriteres(@WebParam(name="marque") String marque, @WebParam(name="modele") String modele, @WebParam(name="moteur") String moteur, @WebParam(name="kmMin")int kmMin, @WebParam(name="kmMax") int kmMax,
+			@WebParam(name="prixMin") double prixMin, @WebParam(name="prixMax") double prixMax);
 	
 
 }

@@ -15,7 +15,12 @@ public class Test {
 		vehicules.getVehicules();
 		vehicules.ajouterVehicule(v);
 		System.out.println(vehicules.toString());
-		g.ajouterVehicule(v);
+		try {
+			g.ajouterVehicule(v);
+		} catch (VehiculeException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 
 	}

@@ -11,28 +11,28 @@ import javax.xml.bind.annotation.XmlType;
 import models.Employe;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name="employes", propOrder = {"employes"})
+@XmlType(name="employes", propOrder = {"employe"})
 @XmlRootElement(name = "employes")
 public class Employes {
 	
-	protected List<Employe> employes;
+	protected List<Employe> employe;
 	
 	public List<Employe> getEmployes() {
-		if(employes == null) {
-			employes = new ArrayList<>();
+		if(employe == null) {
+			employe = new ArrayList<>();
 		}
-		return this.employes;
+		return this.employe;
 	}
 	
 	public void ajouterEmploye(Employe e) {
-		this.employes.add(e);
+		this.employe.add(e);
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((employes == null) ? 0 : employes.hashCode());
+		result = prime * result + ((employe == null) ? 0 : employe.hashCode());
 		return result;
 	}
 
@@ -45,17 +45,17 @@ public class Employes {
 		if (getClass() != obj.getClass())
 			return false;
 		Employes other = (Employes) obj;
-		if (employes == null) {
-			if (other.employes != null)
+		if (employe == null) {
+			if (other.employe != null)
 				return false;
-		} else if (!employes.equals(other.employes))
+		} else if (!employe.equals(other.employe))
 			return false;
 		return true;
 	}
 
 	@Override
 	public String toString() {
-		return "Employes [employes=" + employes + "]";
+		return "Employes [employes=" + employe + "]";
 	}
 	
 	

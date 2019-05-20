@@ -44,34 +44,16 @@ public class GestionGarageServiceProxy implements services.GestionGarageService 
     return gestionGarageService;
   }
   
-  public void ajouterVehicule(services.Vehicule vehicule) throws java.rmi.RemoteException{
-    if (gestionGarageService == null)
-      _initGestionGarageServiceProxy();
-    gestionGarageService.ajouterVehicule(vehicule);
-  }
-  
   public services.Vehicule[] getVehicules() throws java.rmi.RemoteException{
     if (gestionGarageService == null)
       _initGestionGarageServiceProxy();
     return gestionGarageService.getVehicules();
   }
   
-  public services.Vehicule[] getVehiculesParPrix(double prix) throws java.rmi.RemoteException{
+  public void ajouterVehicule(services.Vehicule vehicule) throws java.rmi.RemoteException, services.VehiculeException{
     if (gestionGarageService == null)
       _initGestionGarageServiceProxy();
-    return gestionGarageService.getVehiculesParPrix(prix);
-  }
-  
-  public services.Vehicule[] getVehiculesParMarque(java.lang.String marque) throws java.rmi.RemoteException{
-    if (gestionGarageService == null)
-      _initGestionGarageServiceProxy();
-    return gestionGarageService.getVehiculesParMarque(marque);
-  }
-  
-  public services.Vehicule[] getVehiculesParType(services.VehiculeType type) throws java.rmi.RemoteException{
-    if (gestionGarageService == null)
-      _initGestionGarageServiceProxy();
-    return gestionGarageService.getVehiculesParType(type);
+    gestionGarageService.ajouterVehicule(vehicule);
   }
   
   public void supprimerVehicule(services.Vehicule vehicule) throws java.rmi.RemoteException{
@@ -80,28 +62,28 @@ public class GestionGarageServiceProxy implements services.GestionGarageService 
     gestionGarageService.supprimerVehicule(vehicule);
   }
   
-  public void supprimerEmploye(services.Employe employe) throws java.rmi.RemoteException{
+  public services.Vehicule[] getVehiculesParMarque(java.lang.String marque) throws java.rmi.RemoteException{
     if (gestionGarageService == null)
       _initGestionGarageServiceProxy();
-    gestionGarageService.supprimerEmploye(employe);
+    return gestionGarageService.getVehiculesParMarque(marque);
   }
   
-  public void locationVehicule(services.Vehicule arg0) throws java.rmi.RemoteException{
+  public services.Vehicule[] getVehiculesParPrix(double prix) throws java.rmi.RemoteException{
     if (gestionGarageService == null)
       _initGestionGarageServiceProxy();
-    gestionGarageService.locationVehicule(arg0);
+    return gestionGarageService.getVehiculesParPrix(prix);
   }
   
-  public services.Employe[] getEmployes() throws java.rmi.RemoteException{
+  public services.Vehicule[] getVehiculesParType(services.VehiculeType type) throws java.rmi.RemoteException{
     if (gestionGarageService == null)
       _initGestionGarageServiceProxy();
-    return gestionGarageService.getEmployes();
+    return gestionGarageService.getVehiculesParType(type);
   }
   
-  public void achatVehicule(services.Vehicule arg0) throws java.rmi.RemoteException{
+  public void retourLocationVehicule(services.Vehicule vehicule) throws java.rmi.RemoteException{
     if (gestionGarageService == null)
       _initGestionGarageServiceProxy();
-    gestionGarageService.achatVehicule(arg0);
+    gestionGarageService.retourLocationVehicule(vehicule);
   }
   
   public services.Vehicule getVehicule(java.lang.String immatriculation) throws java.rmi.RemoteException{
@@ -110,10 +92,52 @@ public class GestionGarageServiceProxy implements services.GestionGarageService 
     return gestionGarageService.getVehicule(immatriculation);
   }
   
-  public void ajouterEmploye(services.Employe arg0) throws java.rmi.RemoteException{
+  public void ajouterEmploye(services.Employe arg0) throws java.rmi.RemoteException, services.EmployeException{
     if (gestionGarageService == null)
       _initGestionGarageServiceProxy();
     gestionGarageService.ajouterEmploye(arg0);
+  }
+  
+  public void supprimerEmploye(services.Employe employe) throws java.rmi.RemoteException{
+    if (gestionGarageService == null)
+      _initGestionGarageServiceProxy();
+    gestionGarageService.supprimerEmploye(employe);
+  }
+  
+  public void locationVehicule(services.Vehicule vehicule) throws java.rmi.RemoteException{
+    if (gestionGarageService == null)
+      _initGestionGarageServiceProxy();
+    gestionGarageService.locationVehicule(vehicule);
+  }
+  
+  public void achatVehicule(services.Vehicule vehicule) throws java.rmi.RemoteException{
+    if (gestionGarageService == null)
+      _initGestionGarageServiceProxy();
+    gestionGarageService.achatVehicule(vehicule);
+  }
+  
+  public services.Employe[] getEmployes() throws java.rmi.RemoteException{
+    if (gestionGarageService == null)
+      _initGestionGarageServiceProxy();
+    return gestionGarageService.getEmployes();
+  }
+  
+  public services.Vehicule[] getVehiculesParTrancheDeKM(int kmMin, int kmMax) throws java.rmi.RemoteException{
+    if (gestionGarageService == null)
+      _initGestionGarageServiceProxy();
+    return gestionGarageService.getVehiculesParTrancheDeKM(kmMin, kmMax);
+  }
+  
+  public services.Vehicule[] getVehiculesParTrancheDePrix(double prixMin, double prixMax) throws java.rmi.RemoteException{
+    if (gestionGarageService == null)
+      _initGestionGarageServiceProxy();
+    return gestionGarageService.getVehiculesParTrancheDePrix(prixMin, prixMax);
+  }
+  
+  public services.Vehicule[] getVehiculesParDifferentsCriteres(java.lang.String marque, java.lang.String modele, java.lang.String moteur, int kmMin, int kmMax, double prixMin, double prixMax) throws java.rmi.RemoteException{
+    if (gestionGarageService == null)
+      _initGestionGarageServiceProxy();
+    return gestionGarageService.getVehiculesParDifferentsCriteres(marque, modele, moteur, kmMin, kmMax, prixMin, prixMax);
   }
   
   
