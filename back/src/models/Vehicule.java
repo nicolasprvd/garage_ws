@@ -10,6 +10,11 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "vehicule", propOrder = { "immatriculation", "marque", "modele", "couleur", "moteur", "options", "prix",
 		"kilometrage", "anneeVehicule", "type", "estLoue", "enVente" })
+/**
+ * Classe Vehicule
+ * @author Nicolas - Audrey - Maroua
+ *
+ */
 public class Vehicule {
 
 	@XmlElement(required = true)
@@ -40,6 +45,21 @@ public class Vehicule {
 	public Vehicule() {
 	}
 
+	/**
+	 * Constructeur de la classe Vehicule
+	 * @param immatriculation
+	 * @param marque
+	 * @param couleur
+	 * @param modele
+	 * @param options
+	 * @param moteur
+	 * @param prix
+	 * @param kilometrage
+	 * @param anneeVehicule
+	 * @param type
+	 * @param estLoue
+	 * @param enVente
+	 */
 	public Vehicule(String immatriculation, String marque, String couleur, String modele, String options, String moteur,
 			double prix, int kilometrage, int anneeVehicule, VehiculeType type, boolean estLoue, boolean enVente) {
 		super();
@@ -57,6 +77,8 @@ public class Vehicule {
 		this.enVente = enVente;
 	}
 
+	// Getters et setters 
+	
 	public String getImmatriculation() {
 		return immatriculation;
 	}
@@ -186,7 +208,7 @@ public class Vehicule {
 	public String toString() {
 		return "Vehicule [immatriculation=" + immatriculation + ", marque=" + marque + ", couleur=" + couleur
 				+ ", modele=" + modele + ", options=" + options + ", moteur=" + moteur + ", prix=" + prix
-				+ ", kilometrage=" + kilometrage + ", anneeVehicule=" + anneeVehicule + ", type=" + type + ", estLoue="
+				+ ", kilometrage=" + kilometrage + ", anneeVehicule=" + anneeVehicule + ", type=" + type.toString() + ", estLoue="
 				+ estLoue + ", enVente=" + enVente + "]";
 	}
 

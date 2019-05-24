@@ -13,10 +13,19 @@ import models.Employe;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name="employes", propOrder = {"employe"})
 @XmlRootElement(name = "employes")
+/**
+ * Classe Employes
+ * @author Nicolas - Audrey - Maroua
+ *
+ */
 public class Employes {
 	
 	protected List<Employe> employe;
 	
+	/**
+	 * Récupère la liste des employés
+	 * @return List employes
+	 */
 	public List<Employe> getEmployes() {
 		if(employe == null) {
 			employe = new ArrayList<>();
@@ -24,6 +33,10 @@ public class Employes {
 		return this.employe;
 	}
 	
+	/**
+	 * Ajoute un employé à la liste
+	 * @param e
+	 */
 	public void ajouterEmploye(Employe e) {
 		this.employe.add(e);
 	}

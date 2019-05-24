@@ -4,6 +4,7 @@ import java.util.Objects;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 import parsers.AuthenficationHash;
@@ -18,20 +19,41 @@ import parsers.AuthenficationHash;
 		"mail",
 		"motDePasse"
 })
+/**
+ * Classe Employe
+ * @author Nicolas - Audrey - Maroua
+ *
+ */
 public class Employe {
 	
 	private int matricule;
+	@XmlElement(required = true)
 	private String nom;
+	@XmlElement(required = true)
 	private String prenom;
+	@XmlElement(required = true)
 	private String fonction;
+	@XmlElement(required = true)
 	private String telephone;
+	@XmlElement(required = true)
 	private String mail;
+	@XmlElement(required = true)
 	private String motDePasse;
 	
 	public Employe() {}
 
+	/**
+	 * Constructeur
+	 * @param matricule
+	 * @param nom
+	 * @param prenom
+	 * @param fonction
+	 * @param telephone
+	 * @param mail
+	 * @param motDePasse
+	 */
 	public Employe(int matricule, String nom, String prenom, String fonction, String telephone, String mail, String motDePasse) {
-		this.matricule+=1;
+		this.matricule=matricule;
 		this.nom = nom;
 		this.prenom = prenom;
 		this.fonction = fonction;
@@ -40,6 +62,8 @@ public class Employe {
 		this.motDePasse = motDePasse;
 	}
 
+	// Getters et setters
+	
 	public int getMatricule() {
 		return matricule;
 	}

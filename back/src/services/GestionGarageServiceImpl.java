@@ -15,17 +15,18 @@ import models.VehiculeType;
 import parsers.JAXBParse;
 
 @WebService(endpointInterface = "services.GestionGarageService")
+/**
+ * Classe GestionGarageServiceImpl
+ * Implémente l'interface GestionGarageService
+ * 
+ * @author Nicolas - Audrey - Maroua
+ *
+ */
 public class GestionGarageServiceImpl implements GestionGarageService {
-	
-	List<Vehicule> vehicules;
-	List<Employe> employes;
-	String chemin;
+
+	String chemin = System.getProperty("user.dir") + "/WebContent/WEB-INF/data/";
 	
 	public GestionGarageServiceImpl() {}
-	
-	public GestionGarageServiceImpl(String chemin) {
-		this.chemin = chemin;
-	}
 	
 	@Override
 	public Vehicule getVehicule(String immatriculation) {
@@ -167,10 +168,10 @@ public class GestionGarageServiceImpl implements GestionGarageService {
 		if(employes == null) {
 			employes = new Employes();
 		}
-		//sinon , nous verifions qu'il n'y a pas deja un vehicule avec cette immatriculation (l'immatriculation est unique et identifie le vehicule)
+		//sinon , nous verifions qu'il n'y a pas deja un employe avec ce matricule (le matricule est unique et identifie le lemploye)
 		else {
 			for (int i =  0 ; i < employes.getEmployes().size() ; i++) {
-				if (employes.getEmployes().get(i).getMatricule() == (e.getMatricule())){
+				if (employes.getEmployes().get(i).getMatricule() == e.getMatricule()){
 					throw new EmployeException(e);
 				}
 			}
@@ -247,7 +248,7 @@ public class GestionGarageServiceImpl implements GestionGarageService {
 	
 	private Vehicules getVehiculesXML() {
 		try {
-            return JAXBParse.unmarshal(Vehicules.class, new File("D:/MIAGE/S8/WebServices/GarageWSBack/WebContent/WEB-INF/data/vehicules.xml"));
+            return JAXBParse.unmarshal(Vehicules.class, new File(chemin + "vehicules.xml"));
         } catch (JAXBException e) {
             return null;
         }
@@ -255,7 +256,7 @@ public class GestionGarageServiceImpl implements GestionGarageService {
 	
 	private void setVehicules(Vehicules vehicules) {
 		try {
-            JAXBParse.marshal(vehicules, "D:/MIAGE/S8/WebServices/GarageWSBack/WebContent/WEB-INF/data/vehicules.xml", new File("D:/MIAGE/S8/WebServices/GarageWSBack/WebContent/WEB-INF/data/vehicules.xml"));
+            JAXBParse.marshal(vehicules, chemin + "vehicules.xml", new File(chemin + "vehicules.xml"));
         } catch (JAXBException e) {
             e.printStackTrace();
         }
@@ -263,7 +264,7 @@ public class GestionGarageServiceImpl implements GestionGarageService {
 	
 	private Employes getEmployesXML() {
 		try {
-            return JAXBParse.unmarshal(Employes.class, new File("D:/MIAGE/S8/WebServices/GarageWSBack/WebContent/WEB-INF/data/employes.xml"));
+            return JAXBParse.unmarshal(Employes.class, new File(chemin + "employes.xml"));
         } catch (JAXBException e) {
             return null;
         }
@@ -271,10 +272,22 @@ public class GestionGarageServiceImpl implements GestionGarageService {
 	
 	private void setEmployes(Employes employes) {
 		try {
-            JAXBParse.marshal(employes, "D:/MIAGE/S8/WebServices/GarageWSBack/WebContent/WEB-INF/data/employes.xml", new File("D:/MIAGE/S8/WebServices/GarageWSBack/WebContent/WEB-INF/data/employes.xml"));
+            JAXBParse.marshal(employes, chemin + "employes.xml", new File(chemin + "employes.xml"));
         } catch (JAXBException e) {
             e.printStackTrace();
         }
 	}
+
+
+	@Override
+	public int getStock() {
+		int stock = 0;
+		if(getEmployesXML() != null) {
+			stock = getVehiculesXML().getVehicules().size();
+		}
+		return stock;
+	}
+
+	
 
 }

@@ -9,6 +9,12 @@ import javax.xml.bind.Unmarshaller;
 import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
 
+/**
+ * Classe JAXBParse 
+ * Permet de parser le XML
+ * @author Nicolas - Audrey - Maroua
+ *
+ */
 public class JAXBParse {
 
 	public static <T> void marshal(T object, String path, File file) throws JAXBException {

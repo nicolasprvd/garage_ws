@@ -2,7 +2,12 @@ package parsers;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-
+/**
+ * Classe AuthentificationHash
+ * Permet de crypter le mot de passe de l'utilsateur
+ * @author Nicolas - Audrey - Maroua
+ *
+ */
 public class AuthenficationHash {
 	
 	public static String hash(String motDePasse) {

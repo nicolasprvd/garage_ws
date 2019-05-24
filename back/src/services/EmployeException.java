@@ -1,7 +1,12 @@
 package services;
 
 import models.Employe;
-
+/**
+ * Classe EmployeException
+ * Gère une exception sur un employé
+ * @author NicolasP
+ *
+ */
 public class EmployeException extends Exception {
 	
 private Employe employe;

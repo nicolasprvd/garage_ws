@@ -13,12 +13,21 @@ import models.Vehicule;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name="vehicules", propOrder = {"vehicule"})
 @XmlRootElement(name = "vehicules")
+/**
+ * Classe Vehicules
+ * @author Nicolas - Audrey - Maroua
+ *
+ */
 public class Vehicules {
 	
 	protected List<Vehicule> vehicule;
 	
 	public Vehicules() {}
 	
+	/**
+	 * Récupère la liste des véhicules
+	 * @return List vehicules
+	 */
 	public List<Vehicule> getVehicules() {
 		if(vehicule == null) {
 			vehicule = new ArrayList<>();
@@ -26,6 +35,10 @@ public class Vehicules {
 		return this.vehicule;
 	}
 	
+	/**
+	 * Ajoute un véhicule à la liste
+	 * @param v
+	 */
 	public void ajouterVehicule(Vehicule v) {
 		this.vehicule.add(v);
 	}

@@ -13,7 +13,12 @@ import models.Vehicule;
 import models.VehiculeType;
 
 @WebService
-@SOAPBinding(style=Style.DOCUMENT, use=SOAPBinding.Use.LITERAL, parameterStyle= SOAPBinding.ParameterStyle.WRAPPED) 
+@SOAPBinding(style=Style.DOCUMENT, use=SOAPBinding.Use.LITERAL, parameterStyle= SOAPBinding.ParameterStyle.WRAPPED)
+/**
+ * Interface GestionGarageService
+ * @author Nicolas - Audrey - Maroua
+ *
+ */
 public interface GestionGarageService {
 	
 	/**
@@ -23,8 +28,6 @@ public interface GestionGarageService {
 	 */
 	@WebMethod(operationName = "ajouterVehicule")
 	void ajouterVehicule(@WebParam(name="vehicule") Vehicule v) throws VehiculeException;
-	
-	//Modifier un vehicule
 	
 	
 	/**
@@ -74,55 +77,6 @@ public interface GestionGarageService {
 	List<Vehicule> getVehiculesParType(@WebParam(name="type") VehiculeType type);
 	
 	/**
-	 * Méthode d'ajout d'un employe
-	 * @param e
-	 * @throws EmployeException 
-	 */
-	@WebMethod(operationName = "ajouterEmploye")
-	void ajouterEmploye(Employe e) throws EmployeException;
-	
-	//Inscrire un employe
-	//Authentifier un employé
-
-	//Modifier infos employe
-	
-	/**
-	 * Méthode retournant les employés
-	 * @param e
-	 */
-	@WebMethod(operationName = "getEmployes")
-	List<Employe> getEmployes();
-	
-	/**
-	 * Méthode de suppression d'un véhicule
-	 * @param v
-	 */
-	@WebMethod(operationName = "supprimerEmploye")
-	void supprimerEmploye(@WebParam(name = "employe") Employe e);
-	
-	/**
-	 * Méthode d'achat d'un véhicule
-	 * @param v
-	 */
-	@WebMethod(operationName = "achatVehicule")
-	void achatVehicule(@WebParam(name="Vehicule") Vehicule v);
-	
-	
-	/**
-	 * Méthode de location d'un véhicule
-	 * @param v
-	 */
-	@WebMethod(operationName = "locationVehicule")
-	void locationVehicule(@WebParam(name="Vehicule") Vehicule v);
-
-	/**
-	 * Méthode de retour delocation d'un véhicule
-	 * @param v
-	 */
-	@WebMethod(operationName = "retourLocationVehicule")
-	void retourLocationVehicule(@WebParam(name="Vehicule") Vehicule v);
-
-	/**
 	 * Méthode de retour les vehicules par tranche de prix
 	 * @param prixMin
 	 * @param prixMax
@@ -152,5 +106,54 @@ public interface GestionGarageService {
 	List<Vehicule> getVehiculesParDifferentsCriteres(@WebParam(name="marque") String marque, @WebParam(name="modele") String modele, @WebParam(name="moteur") String moteur, @WebParam(name="kmMin")int kmMin, @WebParam(name="kmMax") int kmMax,
 			@WebParam(name="prixMin") double prixMin, @WebParam(name="prixMax") double prixMax);
 	
+	/**
+	 * Méthode d'achat d'un véhicule
+	 * @param v
+	 */
+	@WebMethod(operationName = "achatVehicule")
+	void achatVehicule(@WebParam(name="Vehicule") Vehicule v);
+	
+	
+	/**
+	 * Méthode de location d'un véhicule
+	 * @param v
+	 */
+	@WebMethod(operationName = "locationVehicule")
+	void locationVehicule(@WebParam(name="Vehicule") Vehicule v);
+
+	/**
+	 * Méthode de retour delocation d'un véhicule
+	 * @param v
+	 */
+	@WebMethod(operationName = "retourLocationVehicule")
+	void retourLocationVehicule(@WebParam(name="Vehicule") Vehicule v);
+	
+	/**
+	 * Méthode d'ajout d'un employe
+	 * @param e
+	 * @throws EmployeException 
+	 */
+	@WebMethod(operationName = "ajouterEmploye")
+	void ajouterEmploye(@WebParam(name="employe") Employe e) throws EmployeException;
+	
+	/**
+	 * Méthode retournant les employés
+	 * @param e
+	 */
+	@WebMethod(operationName = "getEmployes")
+	List<Employe> getEmployes();
+	
+	/**
+	 * Méthode de suppression d'un véhicule
+	 * @param v
+	 */
+	@WebMethod(operationName = "supprimerEmploye")
+	void supprimerEmploye(@WebParam(name = "employe") Employe e);
+	
+	/**
+	 * Méthode retournant le stock de véhicules
+	 */
+	@WebMethod(operationName = "stock")
+	int getStock();
 
 }

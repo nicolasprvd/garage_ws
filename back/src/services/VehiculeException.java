@@ -2,6 +2,12 @@ package services;
 
 import models.Vehicule;
 
+/**
+ * Classe VehiculeException
+ * Gère une exception sur un véhicule
+ * @author Nicolas - Audrey - Maroua
+ *
+ */
 public class VehiculeException extends Exception {
 
 	private Vehicule vehicule;
@@ -15,6 +21,6 @@ public class VehiculeException extends Exception {
 	}
 	
 	public String getMessage() {
-		return "L'immatriculation du vehicule " + vehicule + " est deja existant. Nous ne pouvons donc pas rajouter le vehicule dans la liste." ;
+		return "L'immatriculation du vehicule " + vehicule + " est deja existante. Nous ne pouvons donc pas rajouter le vehicule dans la liste." ;
 	}
 }
